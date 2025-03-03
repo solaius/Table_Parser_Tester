@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extraction Results</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    .table-container {
+      margin-bottom: 40px;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      background: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .back-link:hover {
+      background: #45a049;
+    }
+    .no-tables {
+      background: #fff3cd;
+      color: #856404;
+      padding: 15px;
+      border-radius: 5px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Extraction Results</h1>
+  
+  {% if num_tables == 0 %}
+  <div class="no-tables">
+    <p>No tables were found in the uploaded PDF. Try a different extraction engine or check if the PDF contains tables.</p>
+  </div>
+  {% else %}
+  <p>Found {{ num_tables }} table(s) in the uploaded PDF.</p>
+  
+  {% for i in range(num_tables) %}
+  <div class="table-container">
+    <h2>Table {{ i+1 }}</h2>
+    
+    <h3>Markdown Output</h3>
+    <pre>{{ md_tables[i] }}</pre>
+    
+    <h3>Rendered Table</h3>
+    <div>{{ rendered_tables[i]|safe }}</div>
+  </div>
+  {% endfor %}
+  {% endif %}
+  
+  <a href="{{ url_for('index') }}" class="back-link">Upload another PDF</a>
+</body>
+</html>

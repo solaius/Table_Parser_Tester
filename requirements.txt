@@ -1,0 +1,8 @@
+tabula-py>=2.3.0
+pdfplumber>=0.7.0
+pdfminer.six>=20200517
+pandas>=1.3.0
+Flask>=2.0.0
+Markdown>=3.3.0
+tabulate>=0.8.0
+docling>=0.1.0
