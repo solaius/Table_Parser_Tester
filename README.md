@@ -12,6 +12,7 @@ A modular PDF table extraction tool with a web UI that supports multiple extract
   - PDFMiner
   - Docling
   - Camelot (with both Lattice and Stream methods)
+  - Table Transformer (TATR) - Microsoft's deep learning model for table detection with OCR text extraction
 - Web interface for easy uploading and viewing of results
 - View both raw Markdown and rendered HTML tables
 - Modular design for easy extension with additional extraction engines
@@ -44,12 +45,27 @@ A modular PDF table extraction tool with a web UI that supports multiple extract
    **Windows:**
    Download and install Java from [java.com](https://www.java.com/download/)
 
-4. Run the web application:
+4. Install Tesseract OCR (required for Table Transformer):
+
+   **Ubuntu/Debian:**
+   ```
+   sudo apt-get update && sudo apt-get install -y tesseract-ocr
+   ```
+   
+   **macOS:**
+   ```
+   brew install tesseract
+   ```
+   
+   **Windows:**
+   Download and install Tesseract from [UB Mannheim](https://github.com/UB-Mannheim/tesseract/wiki)
+
+5. Run the web application:
    ```
    python run_web_app.py
    ```
 
-5. Open your browser and navigate to:
+6. Open your browser and navigate to:
    ```
    http://localhost:54656
    ```
@@ -71,7 +87,7 @@ You can also use the command-line interface:
 python -m pdf_table_extractor.main path/to/your/file.pdf --engine tabula
 ```
 
-Available engines: `tabula`, `pdfplumber`, `pdfminer`, `docling`, `camelot-lattice`, `camelot-stream`
+Available engines: `tabula`, `pdfplumber`, `pdfminer`, `docling`, `camelot-lattice`, `camelot-stream`, `table-transformer`
 
 ## Project Structure
 
@@ -84,6 +100,7 @@ pdf_table_extractor/
 ├── pdfminer_extractor.py      # PDFMiner implementation
 ├── docling_extractor.py       # Docling implementation
 ├── camelot_extractor.py       # Camelot implementation
+├── tatr_extractor.py          # Table Transformer implementation
 ├── main.py                    # CLI interface
 ├── app.py                     # Flask-based web UI
 └── templates/
@@ -117,6 +134,12 @@ Then update the web UI and CLI to include your new extractor.
 - camelot-py
 - opencv-python
 - pypdfium2
+- transformers
+- torch
+- timm
+- pdf2image
+- Pillow
+- pytesseract
 - pandas
 - Flask
 - Markdown
