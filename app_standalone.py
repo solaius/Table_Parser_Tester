@@ -6,6 +6,7 @@ import tabula
 import pdfplumber
 from pdfminer.high_level import extract_text
 from docling.document_converter import DocumentConverter
+import camelot
 
 app = Flask(__name__, template_folder='pdf_table_extractor/templates')
 app.config['UPLOAD_FOLDER'] = 'uploads'
@@ -75,6 +76,42 @@ class DoclingExtractor(PDFTableExtractor):
         
         return tables
 
+class CamelotExtractor(PDFTableExtractor):
+    def __init__(self, flavor='lattice'):
+        """
+        Initialize the Camelot extractor with a specific flavor.
+        
+        Args:
+            flavor (str): The extraction method to use, either 'lattice' or 'stream'.
+                          'lattice' is used for tables with clearly demarcated lines.
+                          'stream' is used for tables with whitespaces between cells.
+        """
+        self.flavor = flavor
+        
+    def extract_tables(self, pdf_path: str) -> list:
+        """
+        Extract tables from a PDF using Camelot.
+        
+        Args:
+            pdf_path (str): Path to the PDF file.
+        
+        Returns:
+            list: A list of pandas DataFrames representing the tables.
+        """
+        # Extract tables using Camelot
+        tables = camelot.read_pdf(pdf_path, flavor=self.flavor, pages='all')
+        
+        # Convert Camelot tables to pandas DataFrames
+        dataframes = []
+        for table in tables:
+            # Get the table as a pandas DataFrame
+            df = table.df
+            
+            # Add the table to the list
+            dataframes.append(df)
+        
+        return dataframes
+
 def convert_table_to_markdown(df):
     """
     Convert a pandas DataFrame to Markdown format.
@@ -120,6 +157,10 @@ def index():
             extractor = PDFMinerExtractor()
         elif engine == 'docling':
             extractor = DoclingExtractor()
+        elif engine == 'camelot-lattice':
+            extractor = CamelotExtractor(flavor='lattice')
+        elif engine == 'camelot-stream':
+            extractor = CamelotExtractor(flavor='stream')
         else:
             extractor = TabulaExtractor()
         
@@ -152,4 +193,4 @@ if __name__ == '__main__':
         response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
         return response
         
-    app.run(host='0.0.0.0', port=8009, debug=True)
+    app.run(host='0.0.0.0', port=54656, debug=True)

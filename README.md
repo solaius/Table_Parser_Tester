@@ -11,6 +11,7 @@ A modular PDF table extraction tool with a web UI that supports multiple extract
   - pdfplumber
   - PDFMiner
   - Docling
+  - Camelot (with both Lattice and Stream methods)
 - Web interface for easy uploading and viewing of results
 - View both raw Markdown and rendered HTML tables
 - Modular design for easy extension with additional extraction engines
@@ -50,7 +51,7 @@ A modular PDF table extraction tool with a web UI that supports multiple extract
 
 5. Open your browser and navigate to:
    ```
-   http://localhost:8009
+   http://localhost:54656
    ```
 
 ## Usage
@@ -70,7 +71,7 @@ You can also use the command-line interface:
 python -m pdf_table_extractor.main path/to/your/file.pdf --engine tabula
 ```
 
-Available engines: `tabula`, `pdfplumber`, `pdfminer`, `docling`
+Available engines: `tabula`, `pdfplumber`, `pdfminer`, `docling`, `camelot-lattice`, `camelot-stream`
 
 ## Project Structure
 
@@ -82,6 +83,7 @@ pdf_table_extractor/
 ├── pdfplumber_extractor.py    # pdfplumber implementation
 ├── pdfminer_extractor.py      # PDFMiner implementation
 ├── docling_extractor.py       # Docling implementation
+├── camelot_extractor.py       # Camelot implementation
 ├── main.py                    # CLI interface
 ├── app.py                     # Flask-based web UI
 └── templates/
@@ -112,6 +114,9 @@ Then update the web UI and CLI to include your new extractor.
 - pdfplumber
 - pdfminer.six
 - docling
+- camelot-py
+- opencv-python
+- pypdfium2
 - pandas
 - Flask
 - Markdown

@@ -8,6 +8,7 @@ from pdf_table_extractor.tabula_extractor import TabulaExtractor
 from pdf_table_extractor.pdfplumber_extractor import PdfPlumberExtractor
 from pdf_table_extractor.pdfminer_extractor import PDFMinerExtractor
 from pdf_table_extractor.docling_extractor import DoclingExtractor
+from pdf_table_extractor.camelot_extractor import CamelotExtractor
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
@@ -66,6 +67,10 @@ def index():
             extractor = PDFMinerExtractor()
         elif engine == 'docling':
             extractor = DoclingExtractor()
+        elif engine == 'camelot-lattice':
+            extractor = CamelotExtractor(flavor='lattice')
+        elif engine == 'camelot-stream':
+            extractor = CamelotExtractor(flavor='stream')
         else:
             extractor = TabulaExtractor()
         

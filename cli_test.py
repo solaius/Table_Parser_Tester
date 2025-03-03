@@ -5,6 +5,7 @@ import tabula
 import pdfplumber
 from pdfminer.high_level import extract_text
 from docling.document_converter import DocumentConverter
+import camelot
 
 def convert_table_to_markdown(df):
     """
@@ -104,10 +105,40 @@ def extract_with_docling(pdf_path):
     
     return tables
 
+def extract_with_camelot(pdf_path, flavor='lattice'):
+    print(f"\nExtracting tables from {pdf_path} using Camelot ({flavor})...")
+    
+    # Extract tables using Camelot
+    tables = camelot.read_pdf(pdf_path, flavor=flavor, pages='all')
+    
+    print(f"Found {len(tables)} table(s)")
+    
+    # Convert Camelot tables to pandas DataFrames
+    dataframes = []
+    for i, table in enumerate(tables):
+        # Get the table as a pandas DataFrame
+        df = table.df
+        
+        # Print parsing report
+        print(f"\nTable {i+1} parsing report:")
+        print(f"  Accuracy: {table.parsing_report['accuracy']:.2f}%")
+        print(f"  Whitespace: {table.parsing_report['whitespace']:.2f}%")
+        print(f"  Page: {table.parsing_report['page']}")
+        
+        # Print the table as Markdown
+        print(f"\nTable {i+1}:")
+        md = convert_table_to_markdown(df)
+        print(md)
+        
+        # Add the table to the list
+        dataframes.append(df)
+    
+    return dataframes
+
 def main():
     if len(sys.argv) < 2:
         print("Usage: python cli_test.py <pdf_path> [engine]")
-        print("Available engines: tabula, pdfplumber, pdfminer, docling (default: tabula)")
+        print("Available engines: tabula, pdfplumber, pdfminer, docling, camelot-lattice, camelot-stream (default: tabula)")
         sys.exit(1)
     
     pdf_path = sys.argv[1]
@@ -125,9 +156,13 @@ def main():
         extract_with_pdfminer(pdf_path)
     elif engine == "docling":
         extract_with_docling(pdf_path)
+    elif engine == "camelot-lattice":
+        extract_with_camelot(pdf_path, flavor='lattice')
+    elif engine == "camelot-stream":
+        extract_with_camelot(pdf_path, flavor='stream')
     else:
         print(f"Unknown engine: {engine}")
-        print("Available engines: tabula, pdfplumber, pdfminer, docling")
+        print("Available engines: tabula, pdfplumber, pdfminer, docling, camelot-lattice, camelot-stream")
         sys.exit(1)
 
 if __name__ == "__main__":
