@@ -51,13 +51,13 @@ The PDF Table Extraction Tool is a modular application designed to extract table
 - **Status**: Fully functional
 - **Dependencies**: Java, tabula-py
 - **Strengths**: Good at extracting tables with clear borders
-- **Limitations**: May struggle with complex layouts or borderless tables
+- **Limitations**: Struggles with complex layouts or borderless tables
 
 ### 2. PDFPlumber Extractor
 - **Status**: Fully functional
 - **Dependencies**: pdfplumber
 - **Strengths**: Good general-purpose extractor
-- **Limitations**: May not handle complex tables as well as specialized extractors
+- **Limitations**: Does not handle complex tables as well as specialized extractors
 
 ### 3. PDFMiner Extractor
 - **Status**: Basic implementation
@@ -69,15 +69,15 @@ The PDF Table Extraction Tool is a modular application designed to extract table
 - **Status**: Fully functional
 - **Dependencies**: docling
 - **Strengths**: Modern document processing with good table detection
-- **Limitations**: Relatively new library with potential stability issues
+- **Limitations**: Has trouble capturing table data accurately
 
 ### 5. Camelot Extractor
-- **Status**: Fully functional
+- **Status**: Basic Implementation
 - **Dependencies**: camelot-py, opencv-python, pypdfium2
 - **Strengths**: 
   - Lattice mode: Excellent for tables with clear borders
   - Stream mode: Good for tables with whitespace separators
-- **Limitations**: May require fine-tuning for optimal results
+- **Limitations**: Requires fine-tuning for optimal results
 
 ### 6. Table Transformer (TATR) Extractor
 - **Status**: Partially functional
@@ -112,18 +112,13 @@ The current implementation tries multiple preprocessing techniques to improve OC
 ### Issues and Limitations
 
 1. **Table Structure Detection**:
-   - The model sometimes detects tables correctly but struggles with precise cell boundaries
+   - The model generally detects tables correctly but struggles with identifying cell boundaries
    - The contour-based cell detection is not always accurate, especially for complex tables
 
 2. **OCR Quality**:
-   - Text extraction results are inconsistent
+   - Text extraction results are completely off
    - Some cells return placeholder coordinates instead of actual text
-   - Character recognition accuracy is lower than expected
-
-3. **Integration Challenges**:
-   - The deep learning model requires significant resources
-   - Loading the model can be slow on systems without GPU acceleration
-   - Dependencies (especially Tesseract) may be challenging to install on some systems
+   - Character recognition accuracy is far lower than expected
 
 ## Next Steps for Improvement
 
