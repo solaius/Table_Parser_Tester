@@ -18,3 +18,5 @@ granite_vision.log
 __pycache__/
 *.py[cod]
 *$py.class
+
+uploads/
