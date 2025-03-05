@@ -1,5 +1,10 @@
 import argparse
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
 from pdf_table_extractor.tabula_extractor import TabulaExtractor
 from pdf_table_extractor.pdfplumber_extractor import PdfPlumberExtractor
 from pdf_table_extractor.pdfminer_extractor import PDFMinerExtractor
@@ -31,9 +36,8 @@ def main():
     elif args.engine == "table-transformer":
         extractor = TableTransformerExtractor()
     elif args.engine == "docling-granite":
-        # Use the custom endpoint if provided in the environment
-        api_endpoint = os.environ.get('GRANITE_VISION_ENDPOINT', 'https://peter-private-llm-hosting.apps.prod.rhoai.rh-aiservices-bu.com/')
-        extractor = DoclingGraniteVisionExtractor(api_endpoint=api_endpoint)
+        # The extractor will automatically use the endpoint from .env file
+        extractor = DoclingGraniteVisionExtractor()
 
     tables = extractor.extract_tables(args.pdf_path)
     print(f"Extracted {len(tables)} table(s) using {args.engine}")

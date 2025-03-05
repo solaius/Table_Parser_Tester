@@ -5,6 +5,10 @@ import os
 import sys
 from PIL import Image, ImageOps
 from typing import List, Optional
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 from pdf_table_extractor.extractor_base import PDFTableExtractor
 from docling.document_converter import DocumentConverter, PdfFormatOption
@@ -30,15 +34,19 @@ class DoclingGraniteVisionExtractor(PDFTableExtractor):
         
         Args:
             api_endpoint (str, optional): Custom API endpoint for Granite Vision model.
-                Defaults to using Replicate if None.
+                Defaults to the value from .env file or using Replicate if None.
             replicate_api_token (str, optional): Replicate API token for accessing the model.
                 If None, will try to get from environment variable REPLICATE_API_TOKEN.
         """
-        self.api_endpoint = api_endpoint
+        # Get API endpoint from parameters or environment variable
+        if api_endpoint is None:
+            self.api_endpoint = os.getenv("GRANITE_VISION_ENDPOINT")
+        else:
+            self.api_endpoint = api_endpoint
         
-        # Get Replicate API token from environment variable if not provided
+        # Get Replicate API token from parameters or environment variable
         if replicate_api_token is None:
-            self.replicate_api_token = os.environ.get("REPLICATE_API_TOKEN")
+            self.replicate_api_token = os.getenv("REPLICATE_API_TOKEN")
         else:
             self.replicate_api_token = replicate_api_token
             

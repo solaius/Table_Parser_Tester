@@ -3,6 +3,10 @@ import os
 import pandas as pd
 import markdown
 import zipfile
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 from pdf_table_extractor.tabula_extractor import TabulaExtractor
 from pdf_table_extractor.pdfplumber_extractor import PdfPlumberExtractor
@@ -75,10 +79,6 @@ def index():
             extractor = CamelotExtractor(flavor='stream')
         elif engine == 'table-transformer':
             extractor = TableTransformerExtractor()
-        elif engine == 'docling-granite':
-            # Use the custom endpoint if provided in the environment
-            api_endpoint = os.environ.get('GRANITE_VISION_ENDPOINT', 'https://peter-private-llm-hosting.apps.prod.rhoai.rh-aiservices-bu.com/')
-            extractor = DoclingGraniteVisionExtractor(api_endpoint=api_endpoint)
         else:
             extractor = TabulaExtractor()
         
@@ -103,4 +103,4 @@ def index():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=50213, debug=True)
+    app.run(host='0.0.0.0', port=54656, debug=True)
