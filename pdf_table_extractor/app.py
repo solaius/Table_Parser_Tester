@@ -10,6 +10,7 @@ from pdf_table_extractor.pdfminer_extractor import PDFMinerExtractor
 from pdf_table_extractor.docling_extractor import DoclingExtractor
 from pdf_table_extractor.camelot_extractor import CamelotExtractor
 from pdf_table_extractor.tatr_extractor import TableTransformerExtractor
+from pdf_table_extractor.docling_granitevision import DoclingGraniteVisionExtractor
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
@@ -74,6 +75,10 @@ def index():
             extractor = CamelotExtractor(flavor='stream')
         elif engine == 'table-transformer':
             extractor = TableTransformerExtractor()
+        elif engine == 'docling-granite':
+            # Use the custom endpoint if provided in the environment
+            api_endpoint = os.environ.get('GRANITE_VISION_ENDPOINT', 'https://peter-private-llm-hosting.apps.prod.rhoai.rh-aiservices-bu.com/')
+            extractor = DoclingGraniteVisionExtractor(api_endpoint=api_endpoint)
         else:
             extractor = TabulaExtractor()
         
@@ -98,4 +103,4 @@ def index():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=54656, debug=True)
+    app.run(host='0.0.0.0', port=50213, debug=True)

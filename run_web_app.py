@@ -6,4 +6,5 @@ if __name__ == '__main__':
     os.makedirs('uploads', exist_ok=True)
     
     # Run the Flask app
-    app.run(host='0.0.0.0', port=54656, debug=True)
+    # Use the port from runtime information (50213 or 59476)
+    app.run(host='0.0.0.0', port=50213, debug=True)
