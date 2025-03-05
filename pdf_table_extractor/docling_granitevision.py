@@ -590,5 +590,4 @@ class DoclingGraniteVisionExtractor(PDFTableExtractor):
                             pass
                     
                     raw_outputs.append(raw_data)
-        
         return raw_outputs

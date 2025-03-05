@@ -3,6 +3,11 @@ import os
 import pandas as pd
 import markdown
 import zipfile
+import json
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 from pdf_table_extractor.tabula_extractor import TabulaExtractor
 from pdf_table_extractor.pdfplumber_extractor import PdfPlumberExtractor
@@ -10,6 +15,7 @@ from pdf_table_extractor.pdfminer_extractor import PDFMinerExtractor
 from pdf_table_extractor.docling_extractor import DoclingExtractor
 from pdf_table_extractor.camelot_extractor import CamelotExtractor
 from pdf_table_extractor.tatr_extractor import TableTransformerExtractor
+from pdf_table_extractor.docling_granitevision import DoclingGraniteVisionExtractor
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
@@ -74,28 +80,73 @@ def index():
             extractor = CamelotExtractor(flavor='stream')
         elif engine == 'table-transformer':
             extractor = TableTransformerExtractor()
+        elif engine == 'docling-granite':
+            # The extractor will automatically use the endpoint from .env file
+            extractor = DoclingGraniteVisionExtractor()
         else:
             extractor = TabulaExtractor()
         
         tables = extractor.extract_tables(file_path)
         md_tables = []
         rendered_tables = []
+        json_tables = []
+        raw_json_tables = []
+        
+        # Get raw output as JSON
+        raw_json_tables = extractor.get_raw_output_as_json(file_path)
         
         for i, df in enumerate(tables):
             if not isinstance(df, pd.DataFrame):
                 continue
+            
+            # Generate Markdown
             md = convert_table_to_markdown(df)
-            # Convert Markdown to HTML (using markdown extension for tables)
-            html = markdown.markdown(md, extensions=['tables'])
             md_tables.append(md)
+            
+            # Convert Markdown to HTML
+            html = markdown.markdown(md, extensions=['tables'])
             rendered_tables.append(html)
+            
+            # Generate formatted JSON (for backward compatibility)
+            try:
+                # Make a copy of the DataFrame and ensure column names are unique
+                df_copy = df.copy()
+                
+                # Check if there are duplicate column names
+                if len(df_copy.columns) != len(set(df_copy.columns)):
+                    # If duplicates exist, rename columns to make them unique
+                    new_columns = []
+                    seen = {}
+                    for col in df_copy.columns:
+                        if col in seen:
+                            seen[col] += 1
+                            new_columns.append(f"{col}_{seen[col]}")
+                        else:
+                            seen[col] = 0
+                            new_columns.append(col)
+                    df_copy.columns = new_columns
+                
+                # Convert DataFrame to JSON (orient='records' gives a list of row objects)
+                json_str = df_copy.to_json(orient='records', indent=2)
+                json_tables.append(json_str)
+            except Exception as e:
+                json_tables.append(f"Error converting to JSON: {str(e)}")
+        
+        # Make sure we have raw JSON for each table
+        while len(raw_json_tables) < len(tables):
+            raw_json_tables.append("No raw output available for this table")
         
         return render_template('results.html', 
                               md_tables=md_tables, 
                               rendered_tables=rendered_tables,
-                              num_tables=len(md_tables))
+                              json_tables=json_tables,
+                              raw_json_tables=raw_json_tables,
+                              num_tables=len(md_tables),
+                              engine_name=engine)
     
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=54656, debug=True)
+    # Use DEBUG environment variable if available
+    debug_mode = os.getenv("DEBUG", "false").lower() == "true"
+    app.run(host='0.0.0.0', port=50213, debug=debug_mode)

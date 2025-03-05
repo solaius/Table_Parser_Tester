@@ -59,10 +59,59 @@
       border-radius: 5px;
       margin: 20px 0;
     }
+    /* Collapsible styles */
+    .collapsible {
+      background-color: #f1f1f1;
+      color: #444;
+      cursor: pointer;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 4px;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .active, .collapsible:hover {
+      background-color: #e0e0e0;
+    }
+    .collapsible:after {
+      content: '\002B'; /* Unicode character for "plus" sign (+) */
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .active:after {
+      content: "\2212"; /* Unicode character for "minus" sign (-) */
+    }
+    .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: white;
+      border-radius: 0 0 4px 4px;
+    }
+    .content-inner {
+      padding: 15px;
+    }
+    .engine-info {
+      background-color: #e7f3ff;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
   <h1>Extraction Results</h1>
+  
+  <div class="engine-info">
+    <p><strong>Extraction Engine:</strong> {{ engine_name }}</p>
+  </div>
   
   {% if num_tables == 0 %}
   <div class="no-tables">
@@ -75,15 +124,64 @@
   <div class="table-container">
     <h2>Table {{ i+1 }}</h2>
     
-    <h3>Markdown Output</h3>
-    <pre>{{ md_tables[i] }}</pre>
+    <!-- Rendered Table Section -->
+    <button type="button" class="collapsible">Rendered Table</button>
+    <div class="content">
+      <div class="content-inner">
+        {{ rendered_tables[i]|safe }}
+      </div>
+    </div>
     
-    <h3>Rendered Table</h3>
-    <div>{{ rendered_tables[i]|safe }}</div>
+    <!-- Markdown Output Section -->
+    <button type="button" class="collapsible">Markdown Output</button>
+    <div class="content">
+      <div class="content-inner">
+        <pre>{{ md_tables[i] }}</pre>
+      </div>
+    </div>
+    
+    <!-- Formatted JSON Output Section -->
+    <button type="button" class="collapsible">Formatted JSON</button>
+    <div class="content">
+      <div class="content-inner">
+        <pre>{{ json_tables[i] }}</pre>
+      </div>
+    </div>
+    
+    <!-- Raw JSON Output Section -->
+    <button type="button" class="collapsible">Raw Extractor Output</button>
+    <div class="content">
+      <div class="content-inner">
+        <pre>{{ raw_json_tables[i] }}</pre>
+      </div>
+    </div>
   </div>
   {% endfor %}
   {% endif %}
   
   <a href="{{ url_for('index') }}" class="back-link">Upload another PDF</a>
+  
+  <script>
+    // JavaScript for collapsible sections
+    document.addEventListener('DOMContentLoaded', function() {
+      var coll = document.getElementsByClassName("collapsible");
+      for (var i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        });
+        
+        // Open the first section (Rendered Table) by default
+        if (i % 4 === 0) {
+          coll[i].click();
+        }
+      }
+    });
+  </script>
 </body>
 </html>

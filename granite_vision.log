@@ -1,0 +1,373 @@
+2025-03-05 22:30:02,044 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50213
+ * Running on http://172.17.0.4:50213
+2025-03-05 22:30:02,044 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-05 22:32:02,919 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50213
+ * Running on http://172.17.0.4:50213
+2025-03-05 22:32:02,919 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-05 22:32:16,364 - docling.document_converter - INFO - Going to convert document batch...
+2025-03-05 22:32:16,365 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cpu'
+2025-03-05 22:32:16,763 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cpu'
+2025-03-05 22:32:17,098 - docling.pipeline.base_pipeline - INFO - Processing document basic_tables.pdf
+2025-03-05 22:32:18,674 - docling.document_converter - INFO - Finished converting document basic_tables.pdf in 2.36 sec.
+2025-03-05 22:32:18,756 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 22:32:18,787 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 22:32:18,827 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 22:32:29,956 - werkzeug - INFO - 127.0.0.1 - - [05/Mar/2025 22:32:29] "GET / HTTP/1.1" 200 -
+2025-03-05 22:32:38,252 - docling.document_converter - INFO - Going to convert document batch...
+2025-03-05 22:32:38,253 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cpu'
+2025-03-05 22:32:38,770 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cpu'
+2025-03-05 22:32:39,025 - docling.pipeline.base_pipeline - INFO - Processing document basic_tables.pdf
+2025-03-05 22:32:40,373 - docling.document_converter - INFO - Finished converting document basic_tables.pdf in 2.13 sec.
+2025-03-05 22:32:40,430 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 22:32:40,469 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 22:32:40,515 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 22:32:40,534 - werkzeug - INFO - 127.0.0.1 - - [05/Mar/2025 22:32:40] "POST / HTTP/1.1" 200 -
+2025-03-05 22:34:21,979 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:34:21] "GET / HTTP/1.1" 200 -
+2025-03-05 22:34:25,007 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:34:25] "GET / HTTP/1.1" 200 -
+2025-03-05 22:34:28,010 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:34:28] "GET / HTTP/1.1" 200 -
+2025-03-05 22:34:31,008 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:34:31] "GET / HTTP/1.1" 200 -
+2025-03-05 22:34:34,002 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:34:34] "GET / HTTP/1.1" 200 -
+2025-03-05 22:34:36,997 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:34:36] "GET / HTTP/1.1" 200 -
+2025-03-05 22:34:39,989 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:34:39] "GET / HTTP/1.1" 200 -
+2025-03-05 22:34:42,979 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:34:42] "GET / HTTP/1.1" 200 -
+2025-03-05 22:34:46,021 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:34:46] "GET / HTTP/1.1" 200 -
+2025-03-05 22:34:49,049 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:34:49] "GET / HTTP/1.1" 200 -
+2025-03-05 22:34:52,063 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:34:52] "GET / HTTP/1.1" 200 -
+2025-03-05 22:34:55,072 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:34:55] "GET / HTTP/1.1" 200 -
+2025-03-05 22:34:58,075 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:34:58] "GET / HTTP/1.1" 200 -
+2025-03-05 22:35:01,072 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:35:01] "GET / HTTP/1.1" 200 -
+2025-03-05 22:35:04,065 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:35:04] "GET / HTTP/1.1" 200 -
+2025-03-05 22:35:07,058 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:35:07] "GET / HTTP/1.1" 200 -
+2025-03-05 22:35:10,048 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:35:10] "GET / HTTP/1.1" 200 -
+2025-03-05 22:35:13,040 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:35:13] "GET / HTTP/1.1" 200 -
+2025-03-05 22:35:16,077 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:35:16] "GET / HTTP/1.1" 200 -
+2025-03-05 22:35:19,111 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:35:19] "GET / HTTP/1.1" 200 -
+2025-03-05 22:35:22,126 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:35:22] "GET / HTTP/1.1" 200 -
+2025-03-05 22:35:25,135 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:35:25] "GET / HTTP/1.1" 200 -
+2025-03-05 22:35:28,135 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:35:28] "GET / HTTP/1.1" 200 -
+2025-03-05 22:35:31,133 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:35:31] "GET / HTTP/1.1" 200 -
+2025-03-05 22:35:34,130 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:35:34] "GET / HTTP/1.1" 200 -
+2025-03-05 22:35:37,131 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:35:37] "GET / HTTP/1.1" 200 -
+2025-03-05 22:35:40,127 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:35:40] "GET / HTTP/1.1" 200 -
+2025-03-05 22:35:43,125 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:35:43] "GET / HTTP/1.1" 200 -
+2025-03-05 22:35:46,175 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:35:46] "GET / HTTP/1.1" 200 -
+2025-03-05 22:35:49,208 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:35:49] "GET / HTTP/1.1" 200 -
+2025-03-05 22:35:52,225 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:35:52] "GET / HTTP/1.1" 200 -
+2025-03-05 22:35:55,235 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:35:55] "GET / HTTP/1.1" 200 -
+2025-03-05 22:35:58,236 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:35:58] "GET / HTTP/1.1" 200 -
+2025-03-05 22:37:13,794 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:37:13] "GET / HTTP/1.1" 200 -
+2025-03-05 22:37:16,846 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:37:16] "GET / HTTP/1.1" 200 -
+2025-03-05 22:37:19,870 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:37:19] "GET / HTTP/1.1" 200 -
+2025-03-05 22:37:22,882 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:37:22] "GET / HTTP/1.1" 200 -
+2025-03-05 22:37:26,583 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:37:26] "GET / HTTP/1.1" 200 -
+2025-03-05 22:37:29,586 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:37:29] "GET / HTTP/1.1" 200 -
+2025-03-05 22:37:32,581 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:37:32] "GET / HTTP/1.1" 200 -
+2025-03-05 22:37:35,575 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:37:35] "GET / HTTP/1.1" 200 -
+2025-03-05 22:37:38,568 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:37:38] "GET / HTTP/1.1" 200 -
+2025-03-05 22:37:41,562 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:37:41] "GET / HTTP/1.1" 200 -
+2025-03-05 22:37:44,553 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:37:44] "GET / HTTP/1.1" 200 -
+2025-03-05 22:37:47,610 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:37:47] "GET / HTTP/1.1" 200 -
+2025-03-05 22:37:50,632 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:37:50] "GET / HTTP/1.1" 200 -
+2025-03-05 22:37:53,643 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:37:53] "GET / HTTP/1.1" 200 -
+2025-03-05 22:37:56,647 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:37:56] "GET / HTTP/1.1" 200 -
+2025-03-05 22:37:59,647 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:37:59] "GET / HTTP/1.1" 200 -
+2025-03-05 22:38:02,645 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:38:02] "GET / HTTP/1.1" 200 -
+2025-03-05 22:38:05,637 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:38:05] "GET / HTTP/1.1" 200 -
+2025-03-05 22:38:08,634 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:38:08] "GET / HTTP/1.1" 200 -
+2025-03-05 22:38:11,626 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:38:11] "GET / HTTP/1.1" 200 -
+2025-03-05 22:38:14,620 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:38:14] "GET / HTTP/1.1" 200 -
+2025-03-05 22:38:17,677 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:38:17] "GET / HTTP/1.1" 200 -
+2025-03-05 22:38:20,701 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:38:20] "GET / HTTP/1.1" 200 -
+2025-03-05 22:38:23,713 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:38:23] "GET / HTTP/1.1" 200 -
+2025-03-05 22:38:26,720 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:38:26] "GET / HTTP/1.1" 200 -
+2025-03-05 22:38:29,719 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:38:29] "GET / HTTP/1.1" 200 -
+2025-03-05 22:38:32,716 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:38:32] "GET / HTTP/1.1" 200 -
+2025-03-05 22:38:35,712 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:38:35] "GET / HTTP/1.1" 200 -
+2025-03-05 22:38:38,705 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:38:38] "GET / HTTP/1.1" 200 -
+2025-03-05 22:38:41,696 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:38:41] "GET / HTTP/1.1" 200 -
+2025-03-05 22:38:44,689 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:38:44] "GET / HTTP/1.1" 200 -
+2025-03-05 22:38:47,753 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:38:47] "GET / HTTP/1.1" 200 -
+2025-03-05 22:38:50,775 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:38:50] "GET / HTTP/1.1" 200 -
+2025-03-05 22:38:53,785 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:38:53] "GET / HTTP/1.1" 200 -
+2025-03-05 22:38:56,789 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:38:56] "GET / HTTP/1.1" 200 -
+2025-03-05 22:38:59,789 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:38:59] "GET / HTTP/1.1" 200 -
+2025-03-05 22:39:02,786 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:39:02] "GET / HTTP/1.1" 200 -
+2025-03-05 22:39:05,779 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:39:05] "GET / HTTP/1.1" 200 -
+2025-03-05 22:39:08,773 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:39:08] "GET / HTTP/1.1" 200 -
+2025-03-05 22:39:11,769 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:39:11] "GET / HTTP/1.1" 200 -
+2025-03-05 22:39:14,762 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:39:14] "GET / HTTP/1.1" 200 -
+2025-03-05 22:39:17,823 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:39:17] "GET / HTTP/1.1" 200 -
+2025-03-05 22:39:20,846 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:39:20] "GET / HTTP/1.1" 200 -
+2025-03-05 22:39:23,857 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:39:23] "GET / HTTP/1.1" 200 -
+2025-03-05 22:39:26,863 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:39:26] "GET / HTTP/1.1" 200 -
+2025-03-05 22:39:29,863 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:39:29] "GET / HTTP/1.1" 200 -
+2025-03-05 22:39:32,859 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:39:32] "GET / HTTP/1.1" 200 -
+2025-03-05 22:39:35,853 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:39:35] "GET / HTTP/1.1" 200 -
+2025-03-05 22:39:38,845 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:39:38] "GET / HTTP/1.1" 200 -
+2025-03-05 22:39:41,839 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:39:41] "GET / HTTP/1.1" 200 -
+2025-03-05 22:39:44,833 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:39:44] "GET / HTTP/1.1" 200 -
+2025-03-05 22:39:47,896 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:39:47] "GET / HTTP/1.1" 200 -
+2025-03-05 22:39:50,917 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:39:50] "GET / HTTP/1.1" 200 -
+2025-03-05 22:39:53,927 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:39:53] "GET / HTTP/1.1" 200 -
+2025-03-05 22:39:56,929 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:39:56] "GET / HTTP/1.1" 200 -
+2025-03-05 22:39:59,930 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:39:59] "GET / HTTP/1.1" 200 -
+2025-03-05 22:40:02,926 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:40:02] "GET / HTTP/1.1" 200 -
+2025-03-05 22:40:05,921 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:40:05] "GET / HTTP/1.1" 200 -
+2025-03-05 22:40:08,917 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:40:08] "GET / HTTP/1.1" 200 -
+2025-03-05 22:40:11,910 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:40:11] "GET / HTTP/1.1" 200 -
+2025-03-05 22:40:14,902 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:40:14] "GET / HTTP/1.1" 200 -
+2025-03-05 22:40:17,962 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:40:17] "GET / HTTP/1.1" 200 -
+2025-03-05 22:40:20,986 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:40:20] "GET / HTTP/1.1" 200 -
+2025-03-05 22:40:23,998 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:40:23] "GET / HTTP/1.1" 200 -
+2025-03-05 22:40:27,004 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:40:27] "GET / HTTP/1.1" 200 -
+2025-03-05 22:40:30,004 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:40:30] "GET / HTTP/1.1" 200 -
+2025-03-05 22:40:33,003 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:40:33] "GET / HTTP/1.1" 200 -
+2025-03-05 22:40:35,996 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:40:35] "GET / HTTP/1.1" 200 -
+2025-03-05 22:40:38,989 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:40:38] "GET / HTTP/1.1" 200 -
+2025-03-05 22:40:41,981 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:40:41] "GET / HTTP/1.1" 200 -
+2025-03-05 22:40:44,974 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:40:44] "GET / HTTP/1.1" 200 -
+2025-03-05 22:40:48,039 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:40:48] "GET / HTTP/1.1" 200 -
+2025-03-05 22:40:51,060 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:40:51] "GET / HTTP/1.1" 200 -
+2025-03-05 22:40:54,071 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:40:54] "GET / HTTP/1.1" 200 -
+2025-03-05 22:40:57,075 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:40:57] "GET / HTTP/1.1" 200 -
+2025-03-05 22:41:00,074 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:41:00] "GET / HTTP/1.1" 200 -
+2025-03-05 22:41:03,070 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:41:03] "GET / HTTP/1.1" 200 -
+2025-03-05 22:41:06,063 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:41:06] "GET / HTTP/1.1" 200 -
+2025-03-05 22:41:09,059 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:41:09] "GET / HTTP/1.1" 200 -
+2025-03-05 22:41:12,051 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:41:12] "GET / HTTP/1.1" 200 -
+2025-03-05 22:41:15,045 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:41:15] "GET / HTTP/1.1" 200 -
+2025-03-05 22:41:18,115 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:41:18] "GET / HTTP/1.1" 200 -
+2025-03-05 22:41:21,135 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:41:21] "GET / HTTP/1.1" 200 -
+2025-03-05 22:41:24,145 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:41:24] "GET / HTTP/1.1" 200 -
+2025-03-05 22:41:27,149 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:41:27] "GET / HTTP/1.1" 200 -
+2025-03-05 22:41:30,152 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:41:30] "GET / HTTP/1.1" 200 -
+2025-03-05 22:41:33,149 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:41:33] "GET / HTTP/1.1" 200 -
+2025-03-05 22:41:36,145 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:41:36] "GET / HTTP/1.1" 200 -
+2025-03-05 22:41:39,137 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:41:39] "GET / HTTP/1.1" 200 -
+2025-03-05 22:41:42,130 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:41:42] "GET / HTTP/1.1" 200 -
+2025-03-05 22:41:45,120 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:41:45] "GET / HTTP/1.1" 200 -
+2025-03-05 22:41:48,185 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:41:48] "GET / HTTP/1.1" 200 -
+2025-03-05 22:41:51,205 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:41:51] "GET / HTTP/1.1" 200 -
+2025-03-05 22:41:54,217 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:41:54] "GET / HTTP/1.1" 200 -
+2025-03-05 22:41:57,221 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:41:57] "GET / HTTP/1.1" 200 -
+2025-03-05 22:42:00,220 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:42:00] "GET / HTTP/1.1" 200 -
+2025-03-05 22:42:03,217 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:42:03] "GET / HTTP/1.1" 200 -
+2025-03-05 22:42:06,213 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:42:06] "GET / HTTP/1.1" 200 -
+2025-03-05 22:42:09,208 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:42:09] "GET / HTTP/1.1" 200 -
+2025-03-05 22:42:12,201 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:42:12] "GET / HTTP/1.1" 200 -
+2025-03-05 22:42:15,194 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:42:15] "GET / HTTP/1.1" 200 -
+2025-03-05 22:42:18,261 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:42:18] "GET / HTTP/1.1" 200 -
+2025-03-05 22:42:21,282 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:42:21] "GET / HTTP/1.1" 200 -
+2025-03-05 22:42:24,292 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:42:24] "GET / HTTP/1.1" 200 -
+2025-03-05 22:42:27,296 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:42:27] "GET / HTTP/1.1" 200 -
+2025-03-05 22:42:30,297 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:42:30] "GET / HTTP/1.1" 200 -
+2025-03-05 22:42:33,293 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:42:33] "GET / HTTP/1.1" 200 -
+2025-03-05 22:42:40,769 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50213
+ * Running on http://172.17.0.4:50213
+2025-03-05 22:42:40,769 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-05 22:42:42,279 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:42:42] "GET / HTTP/1.1" 200 -
+2025-03-05 22:42:45,271 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:42:45] "GET / HTTP/1.1" 200 -
+2025-03-05 22:42:48,346 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:42:48] "GET / HTTP/1.1" 200 -
+2025-03-05 22:42:51,365 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:42:51] "GET / HTTP/1.1" 200 -
+2025-03-05 22:42:54,376 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:42:54] "GET / HTTP/1.1" 200 -
+2025-03-05 22:42:57,380 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:42:57] "GET / HTTP/1.1" 200 -
+2025-03-05 22:43:00,380 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:43:00] "GET / HTTP/1.1" 200 -
+2025-03-05 22:43:03,377 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:43:03] "GET / HTTP/1.1" 200 -
+2025-03-05 22:43:06,373 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:43:06] "GET / HTTP/1.1" 200 -
+2025-03-05 22:43:09,405 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:43:09] "GET / HTTP/1.1" 200 -
+2025-03-05 22:43:12,399 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:43:12] "GET / HTTP/1.1" 200 -
+2025-03-05 22:43:15,391 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:43:15] "GET / HTTP/1.1" 200 -
+2025-03-05 22:43:18,298 - werkzeug - INFO - 127.0.0.1 - - [05/Mar/2025 22:43:18] "GET / HTTP/1.1" 200 -
+2025-03-05 22:43:18,458 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:43:18] "GET / HTTP/1.1" 200 -
+2025-03-05 22:43:21,478 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:43:21] "GET / HTTP/1.1" 200 -
+2025-03-05 22:43:24,491 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:43:24] "GET / HTTP/1.1" 200 -
+2025-03-05 22:43:26,438 - docling.document_converter - INFO - Going to convert document batch...
+2025-03-05 22:43:26,440 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cpu'
+2025-03-05 22:43:26,958 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cpu'
+2025-03-05 22:43:27,242 - docling.pipeline.base_pipeline - INFO - Processing document basic_tables.pdf
+2025-03-05 22:43:27,497 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:43:27] "GET / HTTP/1.1" 200 -
+2025-03-05 22:43:28,724 - docling.document_converter - INFO - Finished converting document basic_tables.pdf in 2.33 sec.
+2025-03-05 22:43:28,903 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 22:43:28,951 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 22:43:28,981 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 22:43:29,024 - werkzeug - INFO - 127.0.0.1 - - [05/Mar/2025 22:43:29] "POST / HTTP/1.1" 200 -
+2025-03-05 22:43:30,496 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:43:30] "GET / HTTP/1.1" 200 -
+2025-03-05 22:43:33,492 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:43:33] "GET / HTTP/1.1" 200 -
+2025-03-05 22:43:36,486 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:43:36] "GET / HTTP/1.1" 200 -
+2025-03-05 22:43:39,482 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:43:39] "GET / HTTP/1.1" 200 -
+2025-03-05 22:43:42,474 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:43:42] "GET / HTTP/1.1" 200 -
+2025-03-05 22:43:45,464 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:43:45] "GET / HTTP/1.1" 200 -
+2025-03-05 22:43:48,522 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:43:48] "GET / HTTP/1.1" 200 -
+2025-03-05 22:43:51,546 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:43:51] "GET / HTTP/1.1" 200 -
+2025-03-05 22:43:54,560 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:43:54] "GET / HTTP/1.1" 200 -
+2025-03-05 22:43:57,564 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:43:57] "GET / HTTP/1.1" 200 -
+2025-03-05 22:44:04,496 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50213
+ * Running on http://172.17.0.4:50213
+2025-03-05 22:44:04,496 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-05 22:44:06,563 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:44:06] "GET / HTTP/1.1" 200 -
+2025-03-05 22:44:09,554 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:44:09] "GET / HTTP/1.1" 200 -
+2025-03-05 22:44:12,548 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:44:12] "GET / HTTP/1.1" 200 -
+2025-03-05 22:44:15,540 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:44:15] "GET / HTTP/1.1" 200 -
+2025-03-05 22:44:18,597 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:44:18] "GET / HTTP/1.1" 200 -
+2025-03-05 22:44:21,621 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:44:21] "GET / HTTP/1.1" 200 -
+2025-03-05 22:44:24,636 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:44:24] "GET / HTTP/1.1" 200 -
+2025-03-05 22:44:27,643 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:44:27] "GET / HTTP/1.1" 200 -
+2025-03-05 22:44:30,645 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:44:30] "GET / HTTP/1.1" 200 -
+2025-03-05 22:44:33,644 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:44:33] "GET / HTTP/1.1" 200 -
+2025-03-05 22:44:36,645 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:44:36] "GET / HTTP/1.1" 200 -
+2025-03-05 22:44:39,642 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:44:39] "GET / HTTP/1.1" 200 -
+2025-03-05 22:44:39,730 - werkzeug - INFO - 127.0.0.1 - - [05/Mar/2025 22:44:39] "GET / HTTP/1.1" 200 -
+2025-03-05 22:44:42,636 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:44:42] "GET / HTTP/1.1" 200 -
+2025-03-05 22:44:45,628 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:44:45] "GET / HTTP/1.1" 200 -
+2025-03-05 22:44:48,643 - docling.document_converter - INFO - Going to convert document batch...
+2025-03-05 22:44:48,643 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cpu'
+2025-03-05 22:44:48,689 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:44:48] "GET / HTTP/1.1" 200 -
+2025-03-05 22:44:49,143 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cpu'
+2025-03-05 22:44:49,387 - docling.pipeline.base_pipeline - INFO - Processing document basic_tables.pdf
+2025-03-05 22:44:50,784 - docling.document_converter - INFO - Finished converting document basic_tables.pdf in 2.15 sec.
+2025-03-05 22:44:50,880 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 22:44:50,913 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 22:44:50,952 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 22:44:50,970 - werkzeug - INFO - 127.0.0.1 - - [05/Mar/2025 22:44:50] "POST / HTTP/1.1" 200 -
+2025-03-05 22:44:51,714 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:44:51] "GET / HTTP/1.1" 200 -
+2025-03-05 22:44:54,727 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:44:54] "GET / HTTP/1.1" 200 -
+2025-03-05 22:44:57,734 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:44:57] "GET / HTTP/1.1" 200 -
+2025-03-05 22:45:00,736 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:45:00] "GET / HTTP/1.1" 200 -
+2025-03-05 22:45:03,733 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:45:03] "GET / HTTP/1.1" 200 -
+2025-03-05 22:45:06,725 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:45:06] "GET / HTTP/1.1" 200 -
+2025-03-05 22:45:08,391 - werkzeug - INFO - 127.0.0.1 - - [05/Mar/2025 22:45:08] "GET / HTTP/1.1" 200 -
+2025-03-05 22:45:09,719 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:45:09] "GET / HTTP/1.1" 200 -
+2025-03-05 22:45:12,712 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:45:12] "GET / HTTP/1.1" 200 -
+2025-03-05 22:45:15,704 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:45:15] "GET / HTTP/1.1" 200 -
+2025-03-05 22:45:16,304 - docling.document_converter - INFO - Going to convert document batch...
+2025-03-05 22:45:16,304 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cpu'
+2025-03-05 22:45:16,637 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cpu'
+2025-03-05 22:45:16,864 - docling.pipeline.base_pipeline - INFO - Processing document moderate_tables.pdf
+2025-03-05 22:45:18,771 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:45:18] "GET / HTTP/1.1" 200 -
+2025-03-05 22:45:19,525 - docling.document_converter - INFO - Finished converting document moderate_tables.pdf in 3.22 sec.
+2025-03-05 22:45:19,563 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 22:45:19,604 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 22:45:19,652 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 22:45:19,692 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 22:45:19,731 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 22:45:19,776 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 22:45:19,784 - werkzeug - INFO - 127.0.0.1 - - [05/Mar/2025 22:45:19] "POST / HTTP/1.1" 200 -
+2025-03-05 22:45:21,794 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:45:21] "GET / HTTP/1.1" 200 -
+2025-03-05 22:45:24,807 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:45:24] "GET / HTTP/1.1" 200 -
+2025-03-05 22:45:27,811 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:45:27] "GET / HTTP/1.1" 200 -
+2025-03-05 22:45:30,810 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:45:30] "GET / HTTP/1.1" 200 -
+2025-03-05 22:45:33,809 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:45:33] "GET / HTTP/1.1" 200 -
+2025-03-05 22:45:36,806 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:45:36] "GET / HTTP/1.1" 200 -
+2025-03-05 22:45:39,798 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:45:39] "GET / HTTP/1.1" 200 -
+2025-03-05 22:45:42,790 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:45:42] "GET / HTTP/1.1" 200 -
+2025-03-05 22:45:45,784 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:45:45] "GET / HTTP/1.1" 200 -
+2025-03-05 22:45:48,844 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:45:48] "GET / HTTP/1.1" 200 -
+2025-03-05 22:45:51,866 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:45:51] "GET / HTTP/1.1" 200 -
+2025-03-05 22:45:54,879 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:45:54] "GET / HTTP/1.1" 200 -
+2025-03-05 22:45:57,886 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:45:57] "GET / HTTP/1.1" 200 -
+2025-03-05 22:46:00,887 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:46:00] "GET / HTTP/1.1" 200 -
+2025-03-05 22:46:03,886 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:46:03] "GET / HTTP/1.1" 200 -
+2025-03-05 22:46:06,880 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:46:06] "GET / HTTP/1.1" 200 -
+2025-03-05 22:46:09,873 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:46:09] "GET / HTTP/1.1" 200 -
+2025-03-05 22:46:12,865 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:46:12] "GET / HTTP/1.1" 200 -
+2025-03-05 22:46:15,856 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:46:15] "GET / HTTP/1.1" 200 -
+2025-03-05 22:46:18,921 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:46:18] "GET / HTTP/1.1" 200 -
+2025-03-05 22:46:21,946 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:46:21] "GET / HTTP/1.1" 200 -
+2025-03-05 22:46:24,959 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:46:24] "GET / HTTP/1.1" 200 -
+2025-03-05 22:46:27,964 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:46:27] "GET / HTTP/1.1" 200 -
+2025-03-05 22:46:30,963 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:46:30] "GET / HTTP/1.1" 200 -
+2025-03-05 22:46:33,960 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:46:33] "GET / HTTP/1.1" 200 -
+2025-03-05 22:46:36,956 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:46:36] "GET / HTTP/1.1" 200 -
+2025-03-05 22:46:39,950 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:46:39] "GET / HTTP/1.1" 200 -
+2025-03-05 22:46:42,941 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:46:42] "GET / HTTP/1.1" 200 -
+2025-03-05 22:46:45,934 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:46:45] "GET / HTTP/1.1" 200 -
+2025-03-05 22:46:48,997 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:46:48] "GET / HTTP/1.1" 200 -
+2025-03-05 22:46:52,020 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:46:52] "GET / HTTP/1.1" 200 -
+2025-03-05 22:46:55,030 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:46:55] "GET / HTTP/1.1" 200 -
+2025-03-05 22:46:58,036 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:46:58] "GET / HTTP/1.1" 200 -
+2025-03-05 22:47:01,036 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:47:01] "GET / HTTP/1.1" 200 -
+2025-03-05 22:47:04,033 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:47:04] "GET / HTTP/1.1" 200 -
+2025-03-05 22:47:07,028 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:47:07] "GET / HTTP/1.1" 200 -
+2025-03-05 22:47:10,021 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:47:10] "GET / HTTP/1.1" 200 -
+2025-03-05 22:47:13,012 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:47:13] "GET / HTTP/1.1" 200 -
+2025-03-05 22:47:16,005 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:47:16] "GET / HTTP/1.1" 200 -
+2025-03-05 22:47:19,071 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:47:19] "GET / HTTP/1.1" 200 -
+2025-03-05 22:47:22,093 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:47:22] "GET / HTTP/1.1" 200 -
+2025-03-05 22:47:25,104 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:47:25] "GET / HTTP/1.1" 200 -
+2025-03-05 22:47:28,108 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:47:28] "GET / HTTP/1.1" 200 -
+2025-03-05 22:47:31,108 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:47:31] "GET / HTTP/1.1" 200 -
+2025-03-05 22:47:34,106 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:47:34] "GET / HTTP/1.1" 200 -
+2025-03-05 22:47:37,099 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:47:37] "GET / HTTP/1.1" 200 -
+2025-03-05 22:47:40,091 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:47:40] "GET / HTTP/1.1" 200 -
+2025-03-05 22:47:43,082 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:47:43] "GET / HTTP/1.1" 200 -
+2025-03-05 22:47:46,074 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:47:46] "GET / HTTP/1.1" 200 -
+2025-03-05 22:47:49,141 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:47:49] "GET / HTTP/1.1" 200 -
+2025-03-05 22:47:52,163 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:47:52] "GET / HTTP/1.1" 200 -
+2025-03-05 22:47:55,173 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:47:55] "GET / HTTP/1.1" 200 -
+2025-03-05 22:47:58,177 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:47:58] "GET / HTTP/1.1" 200 -
+2025-03-05 22:48:01,188 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:48:01] "GET / HTTP/1.1" 200 -
+2025-03-05 22:48:04,187 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:48:04] "GET / HTTP/1.1" 200 -
+2025-03-05 22:48:07,186 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:48:07] "GET / HTTP/1.1" 200 -
+2025-03-05 22:48:10,184 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:48:10] "GET / HTTP/1.1" 200 -
+2025-03-05 22:48:13,177 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:48:13] "GET / HTTP/1.1" 200 -
+2025-03-05 22:48:16,170 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:48:16] "GET / HTTP/1.1" 200 -
+2025-03-05 22:48:19,240 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:48:19] "GET / HTTP/1.1" 200 -
+2025-03-05 22:48:22,260 - werkzeug - INFO - 172.17.0.1 - - [05/Mar/2025 22:48:22] "GET / HTTP/1.1" 200 -
+2025-03-05 17:48:56,887 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50213
+ * Running on http://192.168.1.35:50213
+2025-03-05 17:48:56,887 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-05 17:48:56,888 - werkzeug - INFO -  * Restarting with stat
+2025-03-05 17:49:00,682 - werkzeug - WARNING -  * Debugger is active!
+2025-03-05 17:49:00,684 - werkzeug - INFO -  * Debugger PIN: 127-998-137
+2025-03-05 17:49:00,911 - werkzeug - INFO - 127.0.0.1 - - [05/Mar/2025 17:49:00] "GET / HTTP/1.1" 200 -
+2025-03-05 17:49:02,115 - werkzeug - INFO - 127.0.0.1 - - [05/Mar/2025 17:49:02] "GET / HTTP/1.1" 200 -
+2025-03-05 17:49:06,876 - docling.document_converter - INFO - Going to convert document batch...
+2025-03-05 17:49:06,876 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cpu'
+2025-03-05 17:49:07,140 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cpu'
+2025-03-05 17:49:07,314 - docling.pipeline.base_pipeline - INFO - Processing document moderate_tables.pdf
+2025-03-05 17:49:10,324 - docling.document_converter - INFO - Finished converting document moderate_tables.pdf in 3.45 sec.
+2025-03-05 17:49:10,441 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 17:49:10,491 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 17:49:10,521 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 17:49:10,568 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 17:49:10,598 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 17:49:10,635 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 17:49:10,662 - werkzeug - INFO - 127.0.0.1 - - [05/Mar/2025 17:49:10] "POST / HTTP/1.1" 200 -
+2025-03-05 17:49:58,416 - werkzeug - INFO - 127.0.0.1 - - [05/Mar/2025 17:49:58] "GET / HTTP/1.1" 200 -
+2025-03-05 17:49:59,475 - werkzeug - INFO - 127.0.0.1 - - [05/Mar/2025 17:49:59] "GET / HTTP/1.1" 200 -
+2025-03-05 17:50:07,555 - docling.document_converter - INFO - Going to convert document batch...
+2025-03-05 17:50:07,648 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cpu'
+2025-03-05 17:50:08,603 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cpu'
+2025-03-05 17:50:08,867 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cpu'
+2025-03-05 17:50:09,010 - docling.pipeline.base_pipeline - INFO - Processing document moderate_tables.pdf
+2025-03-05 17:50:12,196 - docling.document_converter - INFO - Finished converting document moderate_tables.pdf in 4.64 sec.
+2025-03-05 17:50:12,201 - docling.document_converter - INFO - Going to convert document batch...
+2025-03-05 17:50:12,202 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cpu'
+2025-03-05 17:50:13,072 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cpu'
+2025-03-05 17:50:13,294 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cpu'
+2025-03-05 17:50:13,454 - docling.pipeline.base_pipeline - INFO - Processing document moderate_tables.pdf
+2025-03-05 17:50:16,907 - docling.document_converter - INFO - Finished converting document moderate_tables.pdf in 4.72 sec.
+2025-03-05 17:50:16,916 - werkzeug - INFO - 127.0.0.1 - - [05/Mar/2025 17:50:16] "POST / HTTP/1.1" 200 -
+2025-03-05 17:51:15,088 - werkzeug - INFO - 127.0.0.1 - - [05/Mar/2025 17:51:15] "GET / HTTP/1.1" 200 -
+2025-03-05 17:51:17,882 - docling.document_converter - INFO - Going to convert document batch...
+2025-03-05 17:51:17,882 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cpu'
+2025-03-05 17:51:18,348 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cpu'
+2025-03-05 17:51:18,519 - docling.pipeline.base_pipeline - INFO - Processing document moderate_tables.pdf
+2025-03-05 17:51:21,601 - docling.document_converter - INFO - Finished converting document moderate_tables.pdf in 3.72 sec.
+2025-03-05 17:51:21,727 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 17:51:21,766 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 17:51:21,802 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 17:51:21,839 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 17:51:21,877 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 17:51:21,922 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-05 17:51:21,929 - werkzeug - INFO - 127.0.0.1 - - [05/Mar/2025 17:51:21] "POST / HTTP/1.1" 200 -
