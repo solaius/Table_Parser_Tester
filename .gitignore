@@ -1,7 +1,20 @@
+# Environment variables
+.env
+.env.*
+!.env_example
+
+# Virtual environments
 .env/
 .venv/
 venv/
 env/
-__pycache__/
-*.pyc
+
+# Logs
+*.log
 server.log
+granite_vision.log
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
