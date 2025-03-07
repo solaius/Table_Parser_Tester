@@ -7,17 +7,49 @@ import logging
 from PIL import Image, ImageOps
 from typing import List, Optional
 from dotenv import load_dotenv
+import warnings
 
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    filename='granite_vision.log',
-    filemode='a'
+    handlers=[
+        logging.StreamHandler(),  # Log to console
+        logging.FileHandler('granite_vision.log', mode='a')  # Log to file
+    ]
 )
+
+logger = logging.getLogger(__name__)
 
 # Load environment variables from .env file
 load_dotenv()
+
+# Configure GPU settings from environment variables
+USE_GPU = os.getenv("USE_GPU", "false").lower() == "true"
+GPU_DEVICE = int(os.getenv("GPU_DEVICE", "0"))
+
+# Set up GPU if requested
+if USE_GPU:
+    try:
+        import torch
+        if torch.cuda.is_available():
+            # Set the device
+            torch.cuda.set_device(GPU_DEVICE)
+            logger.info(f"GPU acceleration enabled. Using device: {torch.cuda.get_device_name(GPU_DEVICE)}")
+            
+            # Set environment variable for Docling
+            os.environ["DOCLING_DEVICE"] = f"cuda:{GPU_DEVICE}"
+        else:
+            logger.warning("GPU acceleration requested but no CUDA device available. Falling back to CPU.")
+            USE_GPU = False
+            os.environ["DOCLING_DEVICE"] = "cpu"
+    except (ImportError, Exception) as e:
+        logger.warning(f"Failed to initialize GPU: {e}. Falling back to CPU.")
+        USE_GPU = False
+        os.environ["DOCLING_DEVICE"] = "cpu"
+else:
+    logger.info("Using CPU for processing (GPU not requested).")
+    os.environ["DOCLING_DEVICE"] = "cpu"
 
 from pdf_table_extractor.extractor_base import PDFTableExtractor
 from docling.document_converter import DocumentConverter, PdfFormatOption
@@ -572,15 +604,36 @@ class DoclingGraniteVisionExtractor(PDFTableExtractor):
         Returns:
             list: A list of pandas DataFrames representing the tables.
         """
+        # Log the hardware acceleration status
+        if USE_GPU:
+            logger.info(f"Using GPU (device: {GPU_DEVICE}) for table extraction")
+        else:
+            logger.info("Using CPU for table extraction")
+            
         # Create PDF pipeline options with image generation enabled
-        pdf_pipeline_options = PdfPipelineOptions(do_ocr=False, generate_picture_images=True)
+        pdf_pipeline_options = PdfPipelineOptions(
+            do_ocr=False, 
+            generate_picture_images=True
+        )
         format_options = {InputFormat.PDF: PdfFormatOption(pipeline_options=pdf_pipeline_options)}
         
         # Create a document converter with the specified options
-        converter = DocumentConverter(format_options=format_options)
+        try:
+            # Import here to ensure device setting is applied
+            from docling.utils.accelerator_utils import get_device
+            current_device = get_device()
+            logger.info(f"Docling is using device: {current_device}")
+            
+            converter = DocumentConverter(format_options=format_options)
+        except Exception as e:
+            logger.error(f"Error initializing DocumentConverter: {e}")
+            # Try again with default options
+            logger.info("Trying again with default options...")
+            converter = DocumentConverter()
         
         try:
             # Convert the PDF to a Docling document
+            logger.info(f"Converting PDF: {pdf_path}")
             result = converter.convert(pdf_path)
             doc = result.document
             
@@ -592,25 +645,35 @@ class DoclingGraniteVisionExtractor(PDFTableExtractor):
             
             # Check if the document has tables
             if hasattr(doc, 'tables') and doc.tables:
-                for table in doc.tables:
+                logger.info(f"Found {len(doc.tables)} potential table elements in the document")
+                for i, table in enumerate(doc.tables):
                     # Process only items labeled as tables
                     if hasattr(table, 'label') and table.label == DocItemLabel.TABLE:
+                        logger.info(f"Processing table {i+1}/{len(doc.tables)}")
                         # Try to get the image data for the table if available
                         image_data = None
                         if hasattr(table, 'get_image') and callable(getattr(table, 'get_image', None)):
                             try:
                                 image_data = table.get_image()
-                            except:
-                                pass
+                                logger.info(f"Successfully extracted image data for table {i+1}")
+                            except Exception as e:
+                                logger.warning(f"Failed to get image data for table {i+1}: {e}")
                         
                         # Process the table with Granite Vision if available
-                        df = self._process_table_with_vision(table, image_data)
-                        if not df.empty:
-                            tables.append(df)
+                        try:
+                            df = self._process_table_with_vision(table, image_data)
+                            if not df.empty:
+                                logger.info(f"Successfully extracted table {i+1} with shape {df.shape}")
+                                tables.append(df)
+                            else:
+                                logger.warning(f"Table {i+1} was empty after processing")
+                        except Exception as e:
+                            logger.error(f"Error processing table {i+1}: {e}")
             
+            logger.info(f"Extracted {len(tables)} tables from the document")
             return tables
         except Exception as e:
-            logging.error(f"Error extracting tables with Docling and Granite Vision: {e}")
+            logger.error(f"Error extracting tables with Docling and Granite Vision: {e}", exc_info=True)
             self._last_document = None
             return []
     
