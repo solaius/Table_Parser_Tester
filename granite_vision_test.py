@@ -67,7 +67,9 @@ def test_text_only_request():
     """Test a text-only request to the Granite Vision API"""
     logger.info("Testing text-only request to Granite Vision API...")
     
-    endpoint = os.getenv("GRANITE_VISION_ENDPOINT")
+    base_endpoint = os.getenv("GRANITE_VISION_ENDPOINT")
+    completions_path = os.getenv("OPENAI_COMPLETIONS", "/v1/chat/completions")
+    endpoint = f"{base_endpoint.rstrip('/')}{completions_path}"
     model_name = os.getenv("GRANITE_VISION_MODEL_NAME", "granite-vision-3-2")
     api_key = os.getenv("GRANITE_VISION_MODEL_API_KEY", "")
     
@@ -128,7 +130,9 @@ def test_image_request():
     """Test an image request to the Granite Vision API"""
     logger.info("Testing image request to Granite Vision API...")
     
-    endpoint = os.getenv("GRANITE_VISION_ENDPOINT")
+    base_endpoint = os.getenv("GRANITE_VISION_ENDPOINT")
+    completions_path = os.getenv("OPENAI_COMPLETIONS", "/v1/chat/completions")
+    endpoint = f"{base_endpoint.rstrip('/')}{completions_path}"
     model_name = os.getenv("GRANITE_VISION_MODEL_NAME", "granite-vision-3-2")
     api_key = os.getenv("GRANITE_VISION_MODEL_API_KEY", "")
     

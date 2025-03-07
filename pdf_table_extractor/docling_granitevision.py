@@ -49,7 +49,9 @@ class DoclingGraniteVisionExtractor(PDFTableExtractor):
         """
         # Get API endpoint from parameters or environment variable
         if api_endpoint is None:
-            self.api_endpoint = os.getenv("GRANITE_VISION_ENDPOINT")
+            base_endpoint = os.getenv("GRANITE_VISION_ENDPOINT")
+            completions_path = os.getenv("OPENAI_COMPLETIONS", "/v1/chat/completions")
+            self.api_endpoint = f"{base_endpoint.rstrip('/')}{completions_path}" if base_endpoint else None
         else:
             self.api_endpoint = api_endpoint
         
