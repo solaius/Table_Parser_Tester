@@ -257,11 +257,24 @@ class DoclingGraniteVisionExtractor(PDFTableExtractor):
                             cleaned_lines.append(cleaned)
                         
                         # Skip separator line (the one with dashes)
-                        header = cleaned_lines[0].split('|')
-                        data = [row.split('|') for row in cleaned_lines if '---' not in row and row != cleaned_lines[0]]
+                        header = [h.strip() for h in cleaned_lines[0].split('|')]
+                        data = []
+                        
+                        # Process each row, ensuring it has the same number of columns as the header
+                        for row in cleaned_lines:
+                            if '---' not in row and row != cleaned_lines[0]:
+                                row_data = [cell.strip() for cell in row.split('|')]
+                                # Ensure the row has the same number of columns as the header
+                                if len(row_data) < len(header):
+                                    # Add empty cells if needed
+                                    row_data.extend([''] * (len(header) - len(row_data)))
+                                elif len(row_data) > len(header):
+                                    # Truncate if there are too many columns
+                                    row_data = row_data[:len(header)]
+                                data.append(row_data)
                         
                         # Create DataFrame
-                        df = pd.DataFrame(data, columns=[h.strip() for h in header])
+                        df = pd.DataFrame(data, columns=header)
                         return df
                     else:
                         # Fall back to original table if parsing fails
@@ -319,10 +332,23 @@ class DoclingGraniteVisionExtractor(PDFTableExtractor):
                             cleaned = cleaned[:-1]
                         cleaned_lines.append(cleaned)
                     
-                    header = cleaned_lines[0].split('|')
-                    data = [row.split('|') for row in cleaned_lines if '---' not in row and row != cleaned_lines[0]]
+                    header = [h.strip() for h in cleaned_lines[0].split('|')]
+                    data = []
                     
-                    df = pd.DataFrame(data, columns=[h.strip() for h in header])
+                    # Process each row, ensuring it has the same number of columns as the header
+                    for row in cleaned_lines:
+                        if '---' not in row and row != cleaned_lines[0]:
+                            row_data = [cell.strip() for cell in row.split('|')]
+                            # Ensure the row has the same number of columns as the header
+                            if len(row_data) < len(header):
+                                # Add empty cells if needed
+                                row_data.extend([''] * (len(header) - len(row_data)))
+                            elif len(row_data) > len(header):
+                                # Truncate if there are too many columns
+                                row_data = row_data[:len(header)]
+                            data.append(row_data)
+                    
+                    df = pd.DataFrame(data, columns=header)
                     return df
                 else:
                     if hasattr(table, 'export_to_dataframe'):
@@ -412,10 +438,23 @@ class DoclingGraniteVisionExtractor(PDFTableExtractor):
                                 cleaned = cleaned[:-1]
                             cleaned_lines.append(cleaned)
                         
-                        header = cleaned_lines[0].split('|')
-                        data = [row.split('|') for row in cleaned_lines if '---' not in row and row != cleaned_lines[0]]
+                        header = [h.strip() for h in cleaned_lines[0].split('|')]
+                        data = []
                         
-                        df = pd.DataFrame(data, columns=[h.strip() for h in header])
+                        # Process each row, ensuring it has the same number of columns as the header
+                        for row in cleaned_lines:
+                            if '---' not in row and row != cleaned_lines[0]:
+                                row_data = [cell.strip() for cell in row.split('|')]
+                                # Ensure the row has the same number of columns as the header
+                                if len(row_data) < len(header):
+                                    # Add empty cells if needed
+                                    row_data.extend([''] * (len(header) - len(row_data)))
+                                elif len(row_data) > len(header):
+                                    # Truncate if there are too many columns
+                                    row_data = row_data[:len(header)]
+                                data.append(row_data)
+                        
+                        df = pd.DataFrame(data, columns=header)
                         return df
                     else:
                         if hasattr(table, 'export_to_dataframe'):
@@ -452,7 +491,8 @@ class DoclingGraniteVisionExtractor(PDFTableExtractor):
                     "messages": [
                         {"role": "user", "content": prompt}
                     ],
-                    "max_tokens": 1000
+                    "max_tokens": 1000,
+                    "temperature": 0.7
                 }
                 
                 # Make the API request
@@ -486,10 +526,23 @@ class DoclingGraniteVisionExtractor(PDFTableExtractor):
                                 cleaned = cleaned[:-1]
                             cleaned_lines.append(cleaned)
                         
-                        header = cleaned_lines[0].split('|')
-                        data = [row.split('|') for row in cleaned_lines if '---' not in row and row != cleaned_lines[0]]
+                        header = [h.strip() for h in cleaned_lines[0].split('|')]
+                        data = []
                         
-                        df = pd.DataFrame(data, columns=[h.strip() for h in header])
+                        # Process each row, ensuring it has the same number of columns as the header
+                        for row in cleaned_lines:
+                            if '---' not in row and row != cleaned_lines[0]:
+                                row_data = [cell.strip() for cell in row.split('|')]
+                                # Ensure the row has the same number of columns as the header
+                                if len(row_data) < len(header):
+                                    # Add empty cells if needed
+                                    row_data.extend([''] * (len(header) - len(row_data)))
+                                elif len(row_data) > len(header):
+                                    # Truncate if there are too many columns
+                                    row_data = row_data[:len(header)]
+                                data.append(row_data)
+                        
+                        df = pd.DataFrame(data, columns=header)
                         return df
                     else:
                         if hasattr(table, 'export_to_dataframe'):
