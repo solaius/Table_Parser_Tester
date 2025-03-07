@@ -418,4 +418,10 @@ if __name__ == '__main__':
         response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
         return response
         
-    app.run(host='0.0.0.0', port=54656, debug=True)
+    # Get port from environment variable or use default
+    port = int(os.getenv("PORT", 54800))
+    # Use DEBUG environment variable if available
+    debug_mode = os.getenv("DEBUG", "true").lower() == "true"
+    
+    print(f"Starting web app on port {port} with debug mode {'enabled' if debug_mode else 'disabled'}")
+    app.run(host='0.0.0.0', port=port, debug=debug_mode)
