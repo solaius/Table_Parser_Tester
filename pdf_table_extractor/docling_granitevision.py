@@ -654,7 +654,7 @@ class DoclingGraniteVisionExtractor(PDFTableExtractor):
                         image_data = None
                         if hasattr(table, 'get_image') and callable(getattr(table, 'get_image', None)):
                             try:
-                                image_data = table.get_image()
+                                image_data = table.get_image(doc)
                                 logger.info(f"Successfully extracted image data for table {i+1}")
                             except Exception as e:
                                 logger.warning(f"Failed to get image data for table {i+1}: {e}")

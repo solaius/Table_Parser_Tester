@@ -1,1 +1,238 @@
 
+2025-03-06 08:53:53,191 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50213
+ * Running on http://192.168.1.35:50213
+2025-03-06 08:53:53,191 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-06 08:53:53,192 - werkzeug - INFO -  * Restarting with stat
+2025-03-06 08:53:56,634 - werkzeug - WARNING -  * Debugger is active!
+2025-03-06 08:53:56,636 - werkzeug - INFO -  * Debugger PIN: 417-362-647
+2025-03-06 08:54:22,664 - werkzeug - INFO - 127.0.0.1 - - [06/Mar/2025 08:54:22] "GET / HTTP/1.1" 200 -
+2025-03-06 08:54:22,710 - werkzeug - INFO - 127.0.0.1 - - [06/Mar/2025 08:54:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-06 08:54:27,828 - docling.document_converter - INFO - Going to convert document batch...
+2025-03-06 08:54:27,828 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cpu'
+2025-03-06 08:54:28,133 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cpu'
+2025-03-06 08:54:28,393 - docling.pipeline.base_pipeline - INFO - Processing document moderate_tables.pdf
+2025-03-06 08:54:31,464 - docling.document_converter - INFO - Finished converting document moderate_tables.pdf in 4.24 sec.
+2025-03-06 08:54:31,613 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-06 08:54:31,657 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-06 08:54:31,695 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-06 08:54:31,726 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-06 08:54:31,762 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-06 08:54:31,811 - root - WARNING - API request failed with status code 404: {"detail":"Not Found"}
+2025-03-06 08:54:31,826 - werkzeug - INFO - 127.0.0.1 - - [06/Mar/2025 08:54:31] "POST / HTTP/1.1" 200 -
+2025-03-06 09:12:09,568 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50213
+ * Running on http://192.168.1.35:50213
+2025-03-06 09:12:09,568 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-06 09:12:09,570 - werkzeug - INFO -  * Restarting with stat
+2025-03-06 09:12:13,037 - werkzeug - WARNING -  * Debugger is active!
+2025-03-06 09:12:13,040 - werkzeug - INFO -  * Debugger PIN: 417-362-647
+2025-03-06 09:13:39,010 - werkzeug - INFO -  * Detected change in 'E:\\Code\\Table_Parser_Tester\\run_web_app.py', reloading
+2025-03-06 09:13:39,563 - werkzeug - INFO -  * Restarting with stat
+2025-03-06 09:13:50,369 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50213
+ * Running on http://192.168.1.35:50213
+2025-03-06 09:13:50,369 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-06 09:13:50,369 - werkzeug - INFO -  * Restarting with stat
+2025-03-06 09:13:53,923 - werkzeug - WARNING -  * Debugger is active!
+2025-03-06 09:13:53,925 - werkzeug - INFO -  * Debugger PIN: 417-362-647
+2025-03-06 09:15:11,666 - werkzeug - INFO -  * Detected change in 'E:\\Code\\Table_Parser_Tester\\run_web_app.py', reloading
+2025-03-06 09:15:12,232 - werkzeug - INFO -  * Restarting with stat
+2025-03-06 09:15:15,766 - werkzeug - WARNING -  * Debugger is active!
+2025-03-06 09:15:15,769 - werkzeug - INFO -  * Debugger PIN: 417-362-647
+2025-03-06 09:15:36,260 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50213
+ * Running on http://192.168.1.35:50213
+2025-03-06 09:15:36,260 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-06 09:15:36,260 - werkzeug - INFO -  * Restarting with stat
+2025-03-06 09:15:39,668 - werkzeug - WARNING -  * Debugger is active!
+2025-03-06 09:15:39,671 - werkzeug - INFO -  * Debugger PIN: 417-362-647
+2025-03-06 09:16:47,500 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50213
+ * Running on http://192.168.1.35:50213
+2025-03-06 09:16:47,500 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-06 09:16:47,500 - werkzeug - INFO -  * Restarting with stat
+2025-03-06 09:16:50,851 - werkzeug - WARNING -  * Debugger is active!
+2025-03-06 09:16:50,853 - werkzeug - INFO -  * Debugger PIN: 417-362-647
+2025-03-06 09:27:38,185 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50213
+ * Running on http://192.168.1.35:50213
+2025-03-06 09:27:38,185 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-06 09:27:38,185 - werkzeug - INFO -  * Restarting with stat
+2025-03-06 09:27:41,848 - werkzeug - WARNING -  * Debugger is active!
+2025-03-06 09:27:41,850 - werkzeug - INFO -  * Debugger PIN: 417-362-647
+2025-03-06 15:18:52,592 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.35:5000
+2025-03-06 15:18:52,592 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-06 15:18:52,592 - werkzeug - INFO -  * Restarting with stat
+2025-03-06 15:18:56,166 - werkzeug - WARNING -  * Debugger is active!
+2025-03-06 15:18:56,169 - werkzeug - INFO -  * Debugger PIN: 417-362-647
+2025-03-06 15:20:03,719 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.35:5000
+2025-03-06 15:20:03,719 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-06 15:20:03,719 - werkzeug - INFO -  * Restarting with stat
+2025-03-06 15:20:07,308 - werkzeug - WARNING -  * Debugger is active!
+2025-03-06 15:20:07,311 - werkzeug - INFO -  * Debugger PIN: 417-362-647
+2025-03-06 15:21:20,167 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.35:5000
+2025-03-06 15:21:20,167 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-06 15:21:20,167 - werkzeug - INFO -  * Restarting with stat
+2025-03-06 15:22:05,839 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.35:5000
+2025-03-06 15:22:05,839 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-06 15:22:05,839 - werkzeug - INFO -  * Restarting with stat
+2025-03-06 15:22:09,478 - werkzeug - WARNING -  * Debugger is active!
+2025-03-06 15:22:09,480 - werkzeug - INFO -  * Debugger PIN: 417-362-647
+2025-03-07 13:10:45,842 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:54656
+ * Running on http://192.168.1.35:54656
+2025-03-07 13:10:45,842 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-07 13:10:45,844 - werkzeug - INFO -  * Restarting with stat
+2025-03-07 13:10:49,379 - werkzeug - WARNING -  * Debugger is active!
+2025-03-07 13:10:49,380 - werkzeug - INFO -  * Debugger PIN: 417-362-647
+2025-03-07 13:17:36,693 - werkzeug - INFO -  * Detected change in 'E:\\Code\\Table_Parser_Tester\\run_web_app.py', reloading
+2025-03-07 13:17:37,303 - werkzeug - INFO -  * Restarting with stat
+2025-03-07 13:17:41,105 - werkzeug - WARNING -  * Debugger is active!
+2025-03-07 13:17:41,107 - werkzeug - INFO -  * Debugger PIN: 417-362-647
+2025-03-07 13:23:57,484 - werkzeug - INFO -  * Detected change in 'E:\\Code\\Table_Parser_Tester\\pdf_table_extractor\\app.py', reloading
+2025-03-07 13:23:58,196 - werkzeug - INFO -  * Restarting with stat
+2025-03-07 13:24:02,141 - werkzeug - WARNING -  * Debugger is active!
+2025-03-07 13:24:02,144 - werkzeug - INFO -  * Debugger PIN: 417-362-647
+2025-03-07 13:30:19,540 - werkzeug - INFO -  * Detected change in 'E:\\Code\\Table_Parser_Tester\\pdf_table_extractor\\__init__.py', reloading
+2025-03-07 13:30:20,175 - werkzeug - INFO -  * Restarting with stat
+2025-03-07 13:30:24,156 - werkzeug - WARNING -  * Debugger is active!
+2025-03-07 13:30:24,158 - werkzeug - INFO -  * Debugger PIN: 417-362-647
+2025-03-07 14:19:53,227 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:54800
+ * Running on http://192.168.1.35:54800
+2025-03-07 14:19:53,227 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-07 14:19:53,228 - werkzeug - INFO -  * Restarting with stat
+2025-03-07 14:19:56,906 - werkzeug - WARNING -  * Debugger is active!
+2025-03-07 14:19:56,909 - werkzeug - INFO -  * Debugger PIN: 417-362-647
+2025-03-07 14:22:43,488 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.35:5000
+2025-03-07 14:22:43,488 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-07 14:22:43,488 - werkzeug - INFO -  * Restarting with stat
+2025-03-07 14:22:47,004 - werkzeug - WARNING -  * Debugger is active!
+2025-03-07 14:22:47,006 - werkzeug - INFO -  * Debugger PIN: 417-362-647
+2025-03-07 14:23:03,745 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 14:23:03] "GET / HTTP/1.1" 200 -
+2025-03-07 14:23:10,983 - root - INFO - Successfully initialized custom endpoint client for granite-vision-3-2
+2025-03-07 14:23:10,983 - root - INFO - Using endpoint: https://peter-private-llm-hosting.apps.prod.rhoai.rh-aiservices-bu.com/v1/chat/completions
+2025-03-07 14:23:10,983 - root - INFO - Testing connection to Granite Vision API...
+2025-03-07 14:23:11,637 - root - INFO - \u2705 Connection to Granite Vision API successful!
+2025-03-07 14:23:11,657 - docling.document_converter - INFO - Going to convert document batch...
+2025-03-07 14:23:11,657 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cpu'
+2025-03-07 14:23:11,920 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cpu'
+2025-03-07 14:23:12,101 - docling.pipeline.base_pipeline - INFO - Processing document moderate_tables.pdf
+2025-03-07 14:23:15,185 - docling.document_converter - INFO - Finished converting document moderate_tables.pdf in 3.55 sec.
+2025-03-07 14:23:24,434 - root - ERROR - Error processing table with text-only approach using custom endpoint: 2 columns passed, passed data had 3 columns
+2025-03-07 14:23:32,142 - root - ERROR - Error processing table with text-only approach using custom endpoint: 3 columns passed, passed data had 4 columns
+2025-03-07 14:23:36,682 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 14:23:36] "POST / HTTP/1.1" 200 -
+2025-03-07 14:52:23,511 - pdf_table_extractor.docling_granitevision - WARNING - GPU acceleration requested but no CUDA device available. Falling back to CPU.
+2025-03-07 15:30:54,447 - pdf_table_extractor.docling_granitevision - INFO - GPU acceleration enabled. Using device: NVIDIA GeForce RTX 4090
+2025-03-07 15:44:19,850 - pdf_table_extractor.docling_granitevision - INFO - GPU acceleration enabled. Using device: NVIDIA GeForce RTX 4090
+2025-03-07 15:44:19,862 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.35:5000
+2025-03-07 15:44:19,862 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-07 15:44:19,863 - werkzeug - INFO -  * Restarting with stat
+2025-03-07 15:44:23,818 - pdf_table_extractor.docling_granitevision - INFO - GPU acceleration enabled. Using device: NVIDIA GeForce RTX 4090
+2025-03-07 15:44:23,824 - werkzeug - WARNING -  * Debugger is active!
+2025-03-07 15:44:23,825 - werkzeug - INFO -  * Debugger PIN: 417-362-647
+2025-03-07 15:44:29,280 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 15:44:29] "GET / HTTP/1.1" 200 -
+2025-03-07 15:44:29,325 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 15:44:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-07 15:46:19,367 - root - INFO - Successfully initialized custom endpoint client for granite-vision-3-2
+2025-03-07 15:46:19,367 - root - INFO - Using endpoint: https://peter-private-llm-hosting.apps.prod.rhoai.rh-aiservices-bu.com/v1/chat/completions
+2025-03-07 15:46:19,367 - root - INFO - Testing connection to Granite Vision API...
+2025-03-07 15:46:20,016 - pdf_table_extractor.docling_granitevision - INFO - Using GPU (device: 0) for table extraction
+2025-03-07 15:46:20,016 - pdf_table_extractor.docling_granitevision - ERROR - Error initializing DocumentConverter: cannot import name 'get_device' from 'docling.utils.accelerator_utils' (E:\Code\Table_Parser_Tester\.venv\Lib\site-packages\docling\utils\accelerator_utils.py)
+2025-03-07 15:46:20,016 - pdf_table_extractor.docling_granitevision - INFO - Trying again with default options...
+2025-03-07 15:46:20,017 - pdf_table_extractor.docling_granitevision - INFO - Converting PDF: uploads\moderate_tables.pdf
+2025-03-07 15:46:20,036 - docling.document_converter - INFO - Going to convert document batch...
+2025-03-07 15:46:20,080 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cuda:0'
+2025-03-07 15:46:21,154 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cuda:0'
+2025-03-07 15:46:30,922 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cuda:0'
+2025-03-07 15:46:31,186 - docling.pipeline.base_pipeline - INFO - Processing document moderate_tables.pdf
+2025-03-07 15:46:32,386 - docling.document_converter - INFO - Finished converting document moderate_tables.pdf in 12.36 sec.
+2025-03-07 15:46:32,386 - pdf_table_extractor.docling_granitevision - INFO - Found 6 potential table elements in the document
+2025-03-07 15:46:32,386 - pdf_table_extractor.docling_granitevision - INFO - Processing table 1/6
+2025-03-07 15:46:32,386 - pdf_table_extractor.docling_granitevision - WARNING - Failed to get image data for table 1: FloatingItem.get_image() missing 1 required positional argument: 'doc'
+2025-03-07 15:46:38,202 - pdf_table_extractor.docling_granitevision - INFO - Successfully extracted table 1 with shape (4, 7)
+2025-03-07 15:46:38,202 - pdf_table_extractor.docling_granitevision - INFO - Processing table 2/6
+2025-03-07 15:46:38,202 - pdf_table_extractor.docling_granitevision - WARNING - Failed to get image data for table 2: FloatingItem.get_image() missing 1 required positional argument: 'doc'
+2025-03-07 15:46:41,271 - pdf_table_extractor.docling_granitevision - INFO - Successfully extracted table 2 with shape (7, 3)
+2025-03-07 15:46:41,271 - pdf_table_extractor.docling_granitevision - INFO - Processing table 3/6
+2025-03-07 15:46:41,271 - pdf_table_extractor.docling_granitevision - WARNING - Failed to get image data for table 3: FloatingItem.get_image() missing 1 required positional argument: 'doc'
+2025-03-07 15:46:46,631 - pdf_table_extractor.docling_granitevision - INFO - Successfully extracted table 3 with shape (3, 5)
+2025-03-07 15:46:46,631 - pdf_table_extractor.docling_granitevision - INFO - Processing table 4/6
+2025-03-07 15:46:46,631 - pdf_table_extractor.docling_granitevision - WARNING - Failed to get image data for table 4: FloatingItem.get_image() missing 1 required positional argument: 'doc'
+2025-03-07 15:46:48,401 - pdf_table_extractor.docling_granitevision - INFO - Successfully extracted table 4 with shape (1, 6)
+2025-03-07 15:46:48,403 - pdf_table_extractor.docling_granitevision - INFO - Processing table 5/6
+2025-03-07 15:46:48,403 - pdf_table_extractor.docling_granitevision - WARNING - Failed to get image data for table 5: FloatingItem.get_image() missing 1 required positional argument: 'doc'
+2025-03-07 15:46:51,956 - pdf_table_extractor.docling_granitevision - INFO - Successfully extracted table 5 with shape (2, 5)
+2025-03-07 15:46:51,956 - pdf_table_extractor.docling_granitevision - INFO - Processing table 6/6
+2025-03-07 15:46:51,956 - pdf_table_extractor.docling_granitevision - WARNING - Failed to get image data for table 6: FloatingItem.get_image() missing 1 required positional argument: 'doc'
+2025-03-07 15:46:55,098 - pdf_table_extractor.docling_granitevision - INFO - Successfully extracted table 6 with shape (3, 3)
+2025-03-07 15:46:55,098 - pdf_table_extractor.docling_granitevision - INFO - Extracted 6 tables from the document
+2025-03-07 15:46:55,137 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 15:46:55] "POST / HTTP/1.1" 200 -
+2025-03-07 16:39:58,536 - werkzeug - INFO -  * Detected change in 'E:\\Code\\Table_Parser_Tester\\pdf_table_extractor\\docling_granitevision.py', reloading
+2025-03-07 16:39:59,327 - werkzeug - INFO -  * Restarting with stat
+2025-03-07 16:40:03,235 - pdf_table_extractor.docling_granitevision - INFO - GPU acceleration enabled. Using device: NVIDIA GeForce RTX 4090
+2025-03-07 16:40:03,240 - werkzeug - WARNING -  * Debugger is active!
+2025-03-07 16:40:03,241 - werkzeug - INFO -  * Debugger PIN: 417-362-647
+2025-03-07 16:40:47,707 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 16:40:47] "GET / HTTP/1.1" 200 -
+2025-03-07 16:40:49,594 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 16:40:49] "GET / HTTP/1.1" 200 -
+2025-03-07 16:40:54,774 - root - INFO - Successfully initialized custom endpoint client for granite-vision-3-2
+2025-03-07 16:40:54,774 - root - INFO - Using endpoint: https://peter-private-llm-hosting.apps.prod.rhoai.rh-aiservices-bu.com/v1/chat/completions
+2025-03-07 16:40:54,774 - root - INFO - Testing connection to Granite Vision API...
+2025-03-07 16:40:55,386 - pdf_table_extractor.docling_granitevision - INFO - Using GPU (device: 0) for table extraction
+2025-03-07 16:40:55,386 - pdf_table_extractor.docling_granitevision - ERROR - Error initializing DocumentConverter: cannot import name 'get_device' from 'docling.utils.accelerator_utils' (E:\Code\Table_Parser_Tester\.venv\Lib\site-packages\docling\utils\accelerator_utils.py)
+2025-03-07 16:40:55,386 - pdf_table_extractor.docling_granitevision - INFO - Trying again with default options...
+2025-03-07 16:40:55,388 - pdf_table_extractor.docling_granitevision - INFO - Converting PDF: uploads\moderate_tables.pdf
+2025-03-07 16:40:55,402 - docling.document_converter - INFO - Going to convert document batch...
+2025-03-07 16:40:55,452 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cuda:0'
+2025-03-07 16:40:56,471 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cuda:0'
+2025-03-07 16:41:05,411 - docling.utils.accelerator_utils - INFO - Accelerator device: 'cuda:0'
+2025-03-07 16:41:05,657 - docling.pipeline.base_pipeline - INFO - Processing document moderate_tables.pdf
+2025-03-07 16:41:06,734 - docling.document_converter - INFO - Finished converting document moderate_tables.pdf in 11.34 sec.
+2025-03-07 16:41:06,735 - pdf_table_extractor.docling_granitevision - INFO - Found 6 potential table elements in the document
+2025-03-07 16:41:06,735 - pdf_table_extractor.docling_granitevision - INFO - Processing table 1/6
+2025-03-07 16:41:06,735 - pdf_table_extractor.docling_granitevision - INFO - Successfully extracted image data for table 1
+2025-03-07 16:41:13,249 - pdf_table_extractor.docling_granitevision - INFO - Successfully extracted table 1 with shape (4, 7)
+2025-03-07 16:41:13,251 - pdf_table_extractor.docling_granitevision - INFO - Processing table 2/6
+2025-03-07 16:41:13,251 - pdf_table_extractor.docling_granitevision - INFO - Successfully extracted image data for table 2
+2025-03-07 16:41:16,246 - pdf_table_extractor.docling_granitevision - INFO - Successfully extracted table 2 with shape (7, 3)
+2025-03-07 16:41:16,246 - pdf_table_extractor.docling_granitevision - INFO - Processing table 3/6
+2025-03-07 16:41:16,246 - pdf_table_extractor.docling_granitevision - INFO - Successfully extracted image data for table 3
+2025-03-07 16:41:19,689 - pdf_table_extractor.docling_granitevision - INFO - Successfully extracted table 3 with shape (3, 5)
+2025-03-07 16:41:19,689 - pdf_table_extractor.docling_granitevision - INFO - Processing table 4/6
+2025-03-07 16:41:19,689 - pdf_table_extractor.docling_granitevision - INFO - Successfully extracted image data for table 4
+2025-03-07 16:41:21,149 - pdf_table_extractor.docling_granitevision - INFO - Successfully extracted table 4 with shape (1, 6)
+2025-03-07 16:41:21,149 - pdf_table_extractor.docling_granitevision - INFO - Processing table 5/6
+2025-03-07 16:41:21,149 - pdf_table_extractor.docling_granitevision - INFO - Successfully extracted image data for table 5
+2025-03-07 16:41:25,654 - pdf_table_extractor.docling_granitevision - INFO - Successfully extracted table 5 with shape (2, 5)
+2025-03-07 16:41:25,655 - pdf_table_extractor.docling_granitevision - INFO - Processing table 6/6
+2025-03-07 16:41:25,655 - pdf_table_extractor.docling_granitevision - INFO - Successfully extracted image data for table 6
+2025-03-07 16:41:28,782 - pdf_table_extractor.docling_granitevision - INFO - Successfully extracted table 6 with shape (3, 3)
+2025-03-07 16:41:28,782 - pdf_table_extractor.docling_granitevision - INFO - Extracted 6 tables from the document
+2025-03-07 16:41:28,803 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 16:41:28] "POST / HTTP/1.1" 200 -
+2025-03-07 16:46:40,731 - werkzeug - INFO - 127.0.0.1 - - [07/Mar/2025 16:46:40] "GET / HTTP/1.1" 200 -
