@@ -10,13 +10,16 @@ import logging
 from dotenv import load_dotenv
 from pdf_table_extractor.docling_granitevision import DoclingGraniteVisionExtractor
 
+# Ensure logs directory exists
+os.makedirs('logs', exist_ok=True)
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
         logging.StreamHandler(),
-        logging.FileHandler('granite_extractor_test.log')
+        logging.FileHandler(os.path.join('logs', 'granite_extractor_test.log'))
     ],
     force=True
 )

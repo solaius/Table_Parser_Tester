@@ -14,13 +14,16 @@ from PIL import Image, ImageDraw, ImageOps
 import io
 from dotenv import load_dotenv
 
+# Ensure logs directory exists
+os.makedirs('logs', exist_ok=True)
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
         logging.StreamHandler(),
-        logging.FileHandler('granite_vision_test.log')
+        logging.FileHandler(os.path.join('logs', 'granite_vision_test.log'))
     ],
     force=True
 )

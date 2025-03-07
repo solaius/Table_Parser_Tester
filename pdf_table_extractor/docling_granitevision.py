@@ -9,13 +9,16 @@ from typing import List, Optional
 from dotenv import load_dotenv
 import warnings
 
+# Ensure logs directory exists
+os.makedirs('logs', exist_ok=True)
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
         logging.StreamHandler(),  # Log to console
-        logging.FileHandler('granite_vision.log', mode='a')  # Log to file
+        logging.FileHandler(os.path.join('logs', 'granite_vision.log'), mode='a')  # Log to file
     ]
 )
 
