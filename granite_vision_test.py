@@ -137,10 +137,29 @@ def test_image_request():
         return False
     
     # Look for a sample PDF in the table_pdfs directory
+    base_dir = os.path.dirname(os.path.abspath(__file__))
     pdf_files = [
-        "/workspace/Table_Parser_Tester/table_pdfs/create_tables/table_pdfs/basic_tables.pdf",
-        "/workspace/Table_Parser_Tester/table_pdfs/create_tables/table_pdfs/moderate_tables.pdf"
+        os.path.join(base_dir, "table_pdfs", "create_tables", "table_pdfs", "basic_tables.pdf"),
+        os.path.join(base_dir, "table_pdfs", "create_tables", "table_pdfs", "moderate_tables.pdf")
     ]
+    
+    # If PDFs don't exist, try to generate them
+    if not any(os.path.exists(f) for f in pdf_files):
+        logger.info("No PDF files found. Attempting to generate test PDFs...")
+        try:
+            create_tables_dir = os.path.join(base_dir, "table_pdfs", "create_tables")
+            if os.path.exists(create_tables_dir):
+                # Try to run the PDF generation script
+                generate_script = os.path.join(create_tables_dir, "generate_all_tables.py")
+                if os.path.exists(generate_script):
+                    logger.info(f"Running {generate_script} to generate test PDFs...")
+                    current_dir = os.getcwd()
+                    os.chdir(create_tables_dir)
+                    os.system(f"python {generate_script}")
+                    os.chdir(current_dir)
+                    logger.info("PDF generation completed.")
+        except Exception as e:
+            logger.error(f"Error generating PDFs: {e}")
     
     # Use the first PDF file that exists
     pdf_file = None
@@ -150,8 +169,98 @@ def test_image_request():
             break
     
     if not pdf_file:
-        logger.error("No PDF files found in the expected locations")
-        return False
+        logger.warning("No PDF files found in the expected locations. Creating a simple test image...")
+        try:
+            # Create a simple test image with a table
+            from PIL import Image, ImageDraw, ImageFont
+            
+            # Create a blank image
+            img = Image.new('RGB', (500, 300), color=(255, 255, 255))
+            draw = ImageDraw.Draw(img)
+            
+            # Draw a simple table
+            draw.rectangle([(50, 50), (450, 250)], outline=(0, 0, 0))
+            
+            # Draw table grid
+            for i in range(1, 3):
+                # Horizontal lines
+                draw.line([(50, 50 + i * 50), (450, 50 + i * 50)], fill=(0, 0, 0), width=1)
+                # Vertical lines
+                draw.line([(50 + i * 133, 50), (50 + i * 133, 250)], fill=(0, 0, 0), width=1)
+            
+            # Add some text
+            draw.text((90, 70), "Header 1", fill=(0, 0, 0))
+            draw.text((220, 70), "Header 2", fill=(0, 0, 0))
+            draw.text((350, 70), "Header 3", fill=(0, 0, 0))
+            
+            draw.text((90, 120), "Data 1", fill=(0, 0, 0))
+            draw.text((220, 120), "Data 2", fill=(0, 0, 0))
+            draw.text((350, 120), "Data 3", fill=(0, 0, 0))
+            
+            draw.text((90, 170), "Data 4", fill=(0, 0, 0))
+            draw.text((220, 170), "Data 5", fill=(0, 0, 0))
+            draw.text((350, 170), "Data 6", fill=(0, 0, 0))
+            
+            # Save the image
+            test_image_path = os.path.join(base_dir, "test_table.png")
+            img.save(test_image_path)
+            
+            logger.info(f"Created test image at: {test_image_path}")
+            
+            # Use the test image instead of a PDF
+            image_uri = encode_image(test_image_path)
+            
+            if not image_uri:
+                logger.error("Failed to encode test image")
+                return False
+                
+            # Create a prompt with the image
+            prompt = f"Describe what you see in this image."
+            
+            # Prepare the request payload (OpenAI-compatible format)
+            payload = {
+                "model": model_name,
+                "messages": [
+                    {"role": "user", "content": [
+                        {"type": "text", "text": prompt},
+                        {"type": "image_url", "image_url": {"url": image_uri}}
+                    ]}
+                ],
+                "max_tokens": 300,
+                "temperature": 0.7
+            }
+            
+            headers = {
+                "Content-Type": "application/json"
+            }
+            
+            # Add API key to headers if provided
+            if api_key:
+                headers["Authorization"] = f"Bearer {api_key}"
+            
+            # Make the API request
+            logger.info("Sending image request to API...")
+            response = requests.post(
+                endpoint,
+                headers=headers,
+                data=json.dumps(payload)
+            )
+            
+            # Log the response status and content
+            logger.info(f"Response status code: {response.status_code}")
+            
+            if response.status_code == 200:
+                result = response.json()
+                logger.info("API request successful!")
+                logger.info(f"Response: {json.dumps(result, indent=2)}")
+                return True
+            else:
+                logger.error(f"API request failed: {response.text}")
+                return False
+                
+        except Exception as e:
+            logger.error(f"Error creating test image: {e}")
+            return False
     
     logger.info(f"Using PDF file: {pdf_file}")
     
@@ -235,19 +344,19 @@ def main():
     image_success = test_image_request()
     
     if text_success:
-        logger.info("✅ Text-only API request test PASSED")
+        logger.info("[PASSED] Text-only API request test PASSED")
     else:
-        logger.info("❌ Text-only API request test FAILED")
+        logger.info("[FAILED] Text-only API request test FAILED")
     
     if image_success:
-        logger.info("✅ Image API request test PASSED")
+        logger.info("[PASSED] Image API request test PASSED")
     else:
-        logger.info("❌ Image API request test FAILED")
+        logger.info("[FAILED] Image API request test FAILED")
     
     if text_success or image_success:
-        logger.info("✅ At least one test PASSED - API connection is working")
+        logger.info("[SUCCESS] At least one test PASSED - API connection is working")
     else:
-        logger.info("❌ All tests FAILED - API connection is not working")
+        logger.info("[ERROR] All tests FAILED - API connection is not working")
 
 if __name__ == "__main__":
     main()
