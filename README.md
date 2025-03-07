@@ -23,8 +23,8 @@ A modular PDF table extraction tool with a web UI that supports multiple extract
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/pdf-table-extractor.git
-   cd pdf-table-extractor
+   git clone https://github.com/solaius/Table_Parser_Tester.git
+   cd Table_Parser_Tester
    ```
 
 2. Install the required dependencies:
@@ -117,15 +117,25 @@ python -m pdf_table_extractor.main path/to/your/file.pdf --engine tabula
 
 Available engines: `tabula`, `pdfplumber`, `pdfminer`, `docling`, `camelot-lattice`, `camelot-stream`, `table-transformer`, `docling-granite-vision`
 
-### Testing Granite Vision API Connection
+### Testing Extractors and API Connections
 
-To test your connection to the Granite Vision API:
+To test all extractors and API connections:
 
+```bash
+# Run all tests
+python tests/run_all_tests.py --all
+
+# Run a specific test
+python tests/run_all_tests.py --test test_cuda.py
+
+# List available tests
+python tests/run_all_tests.py --list
+
+# Test Granite Vision API connection
+python tests/granite_vision_test.py
 ```
-python granite_vision_test.py
-```
 
-This script will test both text-only and image-based requests to the Granite Vision API to ensure everything is working correctly.
+The test suite includes tests for all extractors and CUDA availability. Each test will generate a log file in the `logs` directory.
 
 ### GPU Acceleration Setup
 
@@ -183,12 +193,25 @@ Table_Parser_Tester/
 │       ├── index.html             # File upload form
 │       └── results.html           # Display extracted tables
 ├── table_pdfs/                    # Sample PDF files for testing
-├── granite_vision_test.py         # Test script for Granite Vision API
-├── test_granite_extractor.py      # Test script for Granite Vision extractor
+├── tests/                         # Test scripts for all extractors
+│   ├── test_cuda.py               # Test CUDA availability
+│   ├── test_tabula_extractor.py   # Test Tabula extractor
+│   ├── test_pdfplumber_extractor.py # Test PDFPlumber extractor
+│   ├── test_pdfminer_extractor.py # Test PDFMiner extractor
+│   ├── test_docling_extractor.py  # Test Docling extractor
+│   ├── test_docling_granitevision.py # Test Docling with Granite Vision
+│   ├── test_camelot_extractor.py  # Test Camelot extractor
+│   ├── test_tatr_extractor.py     # Test Table Transformer extractor
+│   ├── granite_vision_test.py     # Test Granite Vision API
+│   ├── test_granite_extractor.py  # Test Granite Vision extractor
+│   └── run_all_tests.py           # Run all tests
+├── logs/                          # Log files directory
 ├── run_web_app.py                 # Web application runner
 ├── app_standalone.py              # Standalone application
 ├── requirements.txt               # Project dependencies
 ├── .env_example                   # Example environment variables
+├── CURRENT_STATE.md               # Current state of the project
+├── TROUBLESHOOTING.md             # Troubleshooting guide
 └── README.md                      # This file
 ```
 
