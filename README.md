@@ -134,6 +134,9 @@ To enable GPU acceleration for faster processing:
 1. Install CUDA and cuDNN (see below)
 2. Install PyTorch with CUDA support:
    ```
+   # For CUDA 12.6 (recommended)
+   pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu126
+   
    # For CUDA 12.1
    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
    
