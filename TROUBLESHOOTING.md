@@ -1,5 +1,7 @@
 # Troubleshooting Guide
 
+This guide covers common issues you might encounter when using the PDF Table Extraction Tool and provides solutions to resolve them.
+
 ## Common Issues and Solutions
 
 ### 1. Flask `allow_iframe` Error
@@ -100,3 +102,69 @@ If you're still having issues, try installing `tabulate` for better Markdown tab
 ```bash
 pip install tabulate
 ```
+
+### 6. CUDA/GPU Acceleration Issues
+
+**Issue:**
+GPU acceleration is not working or you're getting CUDA-related errors.
+
+**Solution:**
+- Make sure you have the correct CUDA version installed for your PyTorch version:
+  ```bash
+  # For CUDA 12.6 (recommended)
+  pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu126
+  ```
+
+- Check if CUDA is available in your environment:
+  ```bash
+  python tests/test_cuda.py
+  ```
+
+- Ensure your `.env` file has the correct GPU settings:
+  ```
+  USE_GPU=true
+  GPU_DEVICE=0  # Use 0 for the first GPU
+  ```
+
+- If you don't have a CUDA-compatible GPU, set `USE_GPU=false` in your `.env` file.
+
+### 7. Granite Vision API Connection Issues
+
+**Issue:**
+Cannot connect to the Granite Vision API or getting authentication errors.
+
+**Solution:**
+- Make sure your `.env` file has the correct API endpoint and model name:
+  ```
+  GRANITE_VISION_ENDPOINT=https://your-granite-vision-endpoint.com
+  OPENAI_COMPLETIONS=/v1/chat/completions
+  GRANITE_VISION_MODEL_NAME=granite-vision-3-2
+  ```
+
+- Test your API connection:
+  ```bash
+  python tests/granite_vision_test.py
+  ```
+
+- Check if your API key is valid (if required):
+  ```
+  GRANITE_VISION_MODEL_API_KEY=your_api_key_here
+  ```
+
+### 8. Log File Issues
+
+**Issue:**
+Log files are not being created or are not accessible.
+
+**Solution:**
+- Make sure the `logs` directory exists in your project root:
+  ```bash
+  mkdir -p logs
+  ```
+
+- Check permissions on the logs directory:
+  ```bash
+  chmod 755 logs
+  ```
+
+- All logs are now stored in the `logs` directory with specific names for each extractor.

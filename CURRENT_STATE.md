@@ -45,6 +45,12 @@ The PDF Table Extraction Tool is a modular application designed to extract table
    - Implemented OCR functionality using Tesseract
    - Updated UI and CLI to include Table Transformer option
 
+8. **Docling with Granite Vision Integration**
+   - Added `DoclingGraniteVisionExtractor` combining Docling with IBM's Granite Vision AI model
+   - Implemented GPU acceleration support for faster processing
+   - Added comprehensive logging and error handling
+   - Created test suite for all extractors
+
 ## Current State of Extractors
 
 ### 1. Tabula Extractor
@@ -84,6 +90,18 @@ The PDF Table Extraction Tool is a modular application designed to extract table
 - **Dependencies**: transformers, torch, timm, pdf2image, pytesseract, Tesseract OCR
 - **Strengths**: Advanced deep learning-based table detection
 - **Limitations**: OCR text extraction needs improvement
+
+### 7. Docling with Granite Vision Extractor
+- **Status**: Fully functional
+- **Dependencies**: docling, IBM Granite Vision API
+- **Strengths**: 
+  - Combines Docling's document processing with IBM's Granite Vision AI model
+  - Excellent at handling complex tables and layouts
+  - Can process both image-based and text-based tables
+  - Supports GPU acceleration for faster processing
+- **Limitations**: 
+  - Requires API access to IBM Granite Vision
+  - Processing time can be longer due to API calls
 
 ## Detailed Analysis of Table Transformer Implementation
 
@@ -125,11 +143,12 @@ The current implementation tries multiple preprocessing techniques to improve OC
 ### General Improvements
 
 1. **Error Handling and Logging**:
-   - Implement comprehensive error handling for all extractors
-   - Add detailed logging to help diagnose extraction issues
+   - ✅ Implement comprehensive error handling for all extractors
+   - ✅ Add detailed logging to help diagnose extraction issues
    - Create a unified error reporting system in the UI
 
 2. **Performance Optimization**:
+   - ✅ Implement GPU acceleration for supported extractors
    - Implement caching for extracted tables
    - Add parallel processing for multi-page PDFs
    - Optimize memory usage for large PDFs
@@ -138,6 +157,12 @@ The current implementation tries multiple preprocessing techniques to improve OC
    - Add a preview of the PDF before extraction
    - Implement side-by-side comparison of different extractors
    - Add options to customize extraction parameters
+
+4. **Testing Infrastructure**:
+   - ✅ Create a comprehensive test suite for all extractors
+   - ✅ Add CUDA availability testing
+   - Implement automated CI/CD testing
+   - Add performance benchmarking
 
 ### Extractor-Specific Improvements
 
@@ -182,8 +207,27 @@ The current implementation tries multiple preprocessing techniques to improve OC
    - Add options for merging adjacent tables
    - Improve header detection and handling
 
+### Docling with Granite Vision Improvements
+
+1. **API Integration Enhancement**:
+   - Add support for more Granite Vision model versions
+   - Implement fallback mechanisms for API rate limiting
+   - Add caching for API responses to reduce costs
+
+2. **GPU Optimization**:
+   - Further optimize GPU memory usage
+   - Add support for mixed precision inference
+   - Implement model quantization for faster inference
+
+3. **Advanced Features**:
+   - Add support for table structure recognition
+   - Implement table relationship detection
+   - Add support for multi-page table extraction
+
 ## Conclusion
 
-The PDF Table Extraction Tool has made significant progress with multiple extraction engines implemented and a functional web UI. The most recent addition, the Table Transformer extractor with OCR capabilities, shows promise but requires further refinement to achieve optimal results.
+The PDF Table Extraction Tool has made significant progress with multiple extraction engines implemented and a functional web UI. The most recent additions, including the Table Transformer extractor with OCR capabilities and the Docling with Granite Vision integration, show great promise for handling complex table extraction tasks.
 
-The modular architecture allows for easy extension with additional extractors and improvements to existing ones. By focusing on the next steps outlined above, particularly the OCR enhancements for the Table Transformer extractor, the tool can become even more powerful and accurate for extracting tables from PDF documents.
+The modular architecture allows for easy extension with additional extractors and improvements to existing ones. The addition of GPU acceleration and comprehensive testing infrastructure has significantly improved the reliability and performance of the tool.
+
+By focusing on the next steps outlined above, particularly the API enhancements for the Granite Vision integration and the OCR improvements for the Table Transformer extractor, the tool can become even more powerful and accurate for extracting tables from PDF documents.
