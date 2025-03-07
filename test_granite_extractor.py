@@ -30,34 +30,14 @@ def main():
     """Main function to test the DoclingGraniteVisionExtractor"""
     logger.info("Starting DoclingGraniteVisionExtractor test")
     
-    # Get the script directory and project root
+    # Get the script directory for creating test PDF if needed
     script_dir = os.path.dirname(os.path.abspath(__file__))
     
-    # Find a sample PDF - try different relative paths
-    base_paths = [
-        script_dir,  # Current script directory
-        os.path.dirname(script_dir),  # Project root
-        os.getcwd(),  # Current working directory
-    ]
-    
-    relative_paths = [
-        "table_pdfs/create_tables/table_pdfs/basic_tables.pdf",
-        "table_pdfs/create_tables/table_pdfs/moderate_tables.pdf",
+    # Find a sample PDF - simple paths
+    pdf_files = [
         "table_pdfs/basic_tables.pdf",
         "table_pdfs/moderate_tables.pdf"
     ]
-    
-    # Generate all possible combinations of base paths and relative paths
-    pdf_files = []
-    for base_path in base_paths:
-        for rel_path in relative_paths:
-            pdf_files.append(os.path.join(base_path, rel_path))
-    
-    # Add absolute paths as fallback
-    pdf_files.extend([
-        "/workspace/Table_Parser_Tester/table_pdfs/create_tables/table_pdfs/basic_tables.pdf",
-        "/workspace/Table_Parser_Tester/table_pdfs/create_tables/table_pdfs/moderate_tables.pdf"
-    ])
     
     # Use the first PDF file that exists
     pdf_file = None
