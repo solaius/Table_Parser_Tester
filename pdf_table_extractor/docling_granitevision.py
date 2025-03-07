@@ -77,7 +77,7 @@ class DoclingGraniteVisionExtractor(PDFTableExtractor):
                 self.replicate_api_token = get_env_var("REPLICATE_API_TOKEN")
                 
             self.vision_model = Replicate(
-                model="ibm-granite/granite-vision-3.2-2b",
+                model=os.getenv("GRANITE_VISION_MODEL_NAME", "granite-vision-3-2"),
                 replicate_api_token=self.replicate_api_token,
                 model_kwargs={
                     "max_tokens": 1000,
@@ -96,10 +96,71 @@ class DoclingGraniteVisionExtractor(PDFTableExtractor):
             import requests
             self.use_replicate = False
             self.use_custom_endpoint = True
+            
+            # Get model name from environment variable or use default
+            self.model_name = os.getenv("GRANITE_VISION_MODEL_NAME", "granite-vision-3-2")
+            
+            # Get API key from environment variable
+            self.api_key = os.getenv("GRANITE_VISION_MODEL_API_KEY", "")
+            
+            # Log successful initialization
+            logging.info(f"Successfully initialized custom endpoint client for {self.model_name}")
+            logging.info(f"Using endpoint: {self.api_endpoint}")
+            
+            # Test connection
+            self._test_endpoint_connection()
+            
         except ImportError:
             logging.warning("Could not import requests library for custom endpoint.")
             logging.info("Falling back to basic Docling extraction without Granite Vision.")
             self.use_custom_endpoint = False
+            
+    def _test_endpoint_connection(self):
+        """Test the connection to the custom endpoint."""
+        try:
+            import requests
+            import json
+            
+            # Simple test prompt
+            prompt = "Hello, are you working?"
+            
+            # Prepare the request payload
+            payload = {
+                "model": self.model_name,
+                "messages": [
+                    {"role": "user", "content": prompt}
+                ],
+                "max_tokens": 50,
+                "temperature": 0.7
+            }
+            
+            headers = {
+                "Content-Type": "application/json"
+            }
+            
+            # Add API key to headers if provided
+            if hasattr(self, 'api_key') and self.api_key:
+                headers["Authorization"] = f"Bearer {self.api_key}"
+            
+            # Make the API request
+            logging.info("Testing connection to Granite Vision API...")
+            response = requests.post(
+                self.api_endpoint,
+                headers=headers,
+                data=json.dumps(payload)
+            )
+            
+            if response.status_code == 200:
+                result = response.json()
+                logging.info("✅ Connection to Granite Vision API successful!")
+                return True
+            else:
+                logging.warning(f"❌ Connection to Granite Vision API failed: {response.status_code} - {response.text}")
+                return False
+                
+        except Exception as e:
+            logging.error(f"Error testing endpoint connection: {e}")
+            return False
     
     def _encode_image(self, image: Image.Image, format: str = "png") -> str:
         """
@@ -310,11 +371,12 @@ class DoclingGraniteVisionExtractor(PDFTableExtractor):
                 
                 # Prepare the request payload (OpenAI-compatible format)
                 payload = {
-                    "model": "ibm-granite/granite-vision-3.2-2b",
+                    "model": self.model_name,
                     "messages": [
                         {"role": "user", "content": prompt}
                     ],
-                    "max_tokens": 1000
+                    "max_tokens": 1000,
+                    "temperature": 0.7
                 }
                 
                 # Make the API request
@@ -384,7 +446,7 @@ class DoclingGraniteVisionExtractor(PDFTableExtractor):
             try:
                 # Prepare the request payload (OpenAI-compatible format)
                 payload = {
-                    "model": "ibm-granite/granite-vision-3.2-2b",
+                    "model": self.model_name,
                     "messages": [
                         {"role": "user", "content": prompt}
                     ],
