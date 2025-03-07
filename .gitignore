@@ -13,6 +13,8 @@ env/
 *.log
 server.log
 granite_vision.log
+granite_extractor_test.log
+granite_vision_test.log
 
 # Python cache
 __pycache__/
